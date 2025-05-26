@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI/UX Developer</title>
-    <!-- <link rel="stylesheet" href="style.css">  -->
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
   </head>
   <body>
@@ -25,44 +25,43 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="main-section">
         <div>
-          <h1>SL8:<span> Uncovers Stars. Cast with Confidence.</span></h1>
+          <h1>SL8:<span> Discover Stars. Cast with Confidence.</span></h1>
         </div>
         <!-- Section of project intro -->
-        <div>
-          <!--row of project intro -->
-          <div>
-            <!--column of project description -->
+        <div class="project-container">
+          <div class="about-column1">
+            <!--column of project description: left side-->
             <p>
               Design a location-based platform that connects actors with casting
               directors, simplifying the discovery and networking process for
               local productions.
             </p>
           </div>
-          <div>
-            <!--first column block of content -->
-            <div>Project</div>
-            <div>Case Study</div>
-            <div>Responsive Design</div>
-          </div>
-          <div>
-            <!--second column block of content -->
-            <div>Role</div>
-            <div>UX Research & Strategy</div>
-            <div>UI Design</div>
-            <div>Validation</div>
-          </div>
-          <div>
-            <!--thrid column block of content -->
-            <div>Duration</div>
-            <div>6 Weeks</div>
-            <div>2024</div>
+          <!-- Right Side -->
+          <div class="wrapper-columns">
+            <div class="column2">
+              <!--first column block of content -->
+              <div>Project</div>
+              <div>Case Study</div>
+              <div>Responsive Design</div>
+            </div>
+            <div class="column3">
+              <!--second column block of content -->
+              <div>Role</div>
+              <div>UX Research & Strategy</div>
+              <div>UI Design</div>
+              <div>Validation</div>
+            </div>
+            <div class="column4">
+              <!--thrid column block of content -->
+              <div>Duration</div>
+              <div>6 Weeks</div>
+              <div>2024</div>
+            </div>
           </div>
         </div>
-      </section>
-      <section>
-        <!-- project image intro -->
         <div>
           <!-- image wrapper -->
           <picture>
@@ -73,52 +72,55 @@
             <img src="./img/sl8/2x/SL8@2x.jpg" alt="SL8 SL8IDesktop_mockups" />
           </picture>
         </div>
-        <!-- quote section -->
+        <div class="quote-container">
+          <blockquote>
+            <p>
+              Looking for your next star? Discover talented actors nearby and
+              cast locally — where great stories begin close to home.
+            </p>
+          </blockquote>
+        </div>
         <div>
-          <!-- div container -->
           <div>
-            <!-- quote wrapper -->
-            <blockquote>
-              "Looking for your next star? Discover talented actors nearby and
-              cast locally — where great stories begin close to home."
-            </blockquote>
+            <picture>
+              <source
+                srcset="./img/sl8/1x/sl8Phone-Mockup-floating@1x.png"
+                media="(max-width:767px)"
+              />
+              <img
+                src="./img/sl8/2x/sl8Phone-Mockup-floating@2x.png"
+                alt="SL8 SL8IDesktop_mockups"
+              />
+            </picture>
+          </div>
+          <div>
+            <div>
+              <h2>The Challenge</h2>
+              <p>
+                SL8 was inspired by personal experience and validated through
+                interviews with actors and casting professionals. Research
+                uncovered a heavy reliance on unreliable platforms like social
+                media, with limited support for location-based casting. A
+                competitive analysis revealed critical gaps — low trust, poor
+                filtering, and vague project listings — emphasizing the need for
+                a centralized, reliable platform tailored to discovering and
+                connecting with local talent.
+              </p>
+            </div>
+            <div>
+              <h2>The Solution</h2>
+              <p>
+                The solution is to create an inclusive platform that connects
+                casting professionals with local actors. SL8 streamlines talent
+                discovery and verification, allowing actors to showcase their
+                skills while enabling casting directors to find talent based on
+                location, experience, and demographics through an easy-to-use
+                swipe interface.
+              </p>
+            </div>
           </div>
         </div>
-        <div>
-          <picture>
-            <source
-              srcset="./img/sl8/1x/sl8Phone-Mockup-floating@1x.png"
-              media="(max-width:767px)"
-            />
-            <img
-              src="./img/sl8/2x/sl8Phone-Mockup-floating@2x.png"
-              alt="SL8 SL8IDesktop_mockups"
-            />
-          </picture>
-        </div>
-        <div>
-          <h2>The Challenge</h2>
-          <p>
-            SL8 was inspired by personal experience and validated through
-            interviews with actors and casting professionals. Research uncovered
-            a heavy reliance on unreliable platforms like social media, with
-            limited support for location-based casting. A competitive analysis
-            revealed critical gaps — low trust, poor filtering, and vague
-            project listings — emphasizing the need for a centralized, reliable
-            platform tailored to discovering and connecting with local talent.
-          </p>
-        </div>
-        <div>
-          <h2>The Solution</h2>
-          <p>
-            The solution is to create an inclusive platform that connects
-            casting professionals with local actors. SL8 streamlines talent
-            discovery and verification, allowing actors to showcase their skills
-            while enabling casting directors to find talent based on location,
-            experience, and demographics through an easy-to-use swipe interface.
-          </p>
-        </div>
-        <div>
+        <div class="user-research-section">
           <h2>User Research</h2>
           <p>
             Interviews were conducted with actors from diverse ethnic
@@ -132,19 +134,29 @@
             networking capabilities, and functionalities tailored specifically
             to actors' professional needs.
           </p>
+          <div class="quote-wrapper">
+            <blockquote>
+              <strong>What challenges do you face when casting?</strong><br />
+              "Finding diverse talent can be challenging. Often, casting
+              resources lack specificity and clarity."
+              <cite> Erin R., Casting Director</cite>
+            </blockquote>
+          </div>
           <div>
-            <div>
-              <blockquote>
-                "What challenges do you face when casting?" <br />
-                "Finding diverse talent can be challenging. Often, casting
-                resources lack specificity and clarity." Erin R. Casting
-                Director
-              </blockquote>
-            </div>
+            <picture>
+              <source
+                srcset="./img/sl8/1x/user-research@1x.jpg"
+                media="(max-width:767px)"
+              />
+              <img
+                src="./img/sl8/2x/user-research@2x.jpg"
+                alt="A collage of people"
+              />
+            </picture>
           </div>
         </div>
         <div>
-          <!-- container -->
+          <!-- Quantitative section -->
           <h2>Quantitative Analysis</h2>
           <p>
             I conducted several interviews to understand user behaviors and
@@ -154,9 +166,9 @@
             and casting directors.
           </p>
           <div>
-            <!-- row -->
+            <!-- Quantitative row -->
             <div>
-              <!-- column -->
+              <!-- Quantitative left side column -->
               <picture>
                 <source
                   srcset="./img/sl8/1x/quantitiveanalysis@1x.png"
@@ -168,6 +180,7 @@
                 />
               </picture>
               <div>
+                <!-- Insights right side column -->
                 <h4>Key Comparative Insights:</h4>
                 <ul>
                   <li>
@@ -194,30 +207,61 @@
             </div>
           </div>
         </div>
-        <div>
-          <h2>Competitive Analysis</h2>
-          <p>
-            To better understand the gaps in the current casting experience, I
-            conducted a competitive analysis of platforms like
-            <span>BeScene</span> and <span>Project Casting</span>. While both
-            aim to connect talent with opportunities, they fall short in several
-            key areas.
-          </p>
-          <ul>
-            <li>Poor SEO performance, limiting visibility and reach</li>
-            <li>
-              No location-based recommendations, making local talent discovery
-              difficult
-            </li>
-            <li>Filter functionality is unreliable or ineffective</li>
-            <li>Frequent app crashes and technical issues</li>
-            <li>Cluttered UI and poor layout structure</li>
-            <li>
-              Fonts and text are difficult to read, affecting accessibility
-            </li>
-          </ul>
+        <div class="container-analysis">
+          <div class="row-analysis">
+            <div class="column-analysis">
+              <h2>Competitive Analysis</h2>
+              <p>
+                To better understand the gaps in the current casting experience,
+                I conducted a competitive analysis of platforms like
+                <span>BeScene</span> and <span>Project Casting</span>. While
+                both aim to connect talent with opportunities, they fall short
+                in several key areas.
+              </p>
+            </div>
+            <ul>
+              <li>Poor SEO performance, limiting visibility and reach</li>
+              <li>
+                No location-based recommendations, making local talent discovery
+                difficult
+              </li>
+              <li>Filter functionality is unreliable or ineffective</li>
+              <li>Frequent app crashes and technical issues</li>
+              <li>Cluttered UI and poor layout structure</li>
+              <li>
+                Fonts and text are difficult to read, affecting accessibility
+              </li>
+            </ul>
+            <div class="image-row">
+              <div class="image-column1">
+                <picture>
+                  <source
+                    srcset="./img/sl8/1x/BeScene@1x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./img/sl8/2x/BeScene@2x.jpg"
+                    alt="casting site BeScene"
+                  />
+                </picture>
+              </div>
+              <div class="image-column2">
+                <picture>
+                  <source
+                    srcset="./img/sl8/1x/projectcasting@1x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./img/sl8/2x/projectcasting@2x.jpg"
+                    alt="casting site project casting"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
+          <!-- user personas section -->
           <h2>User Personas</h2>
           <p>
             After conducting in-depth interviews, I gained insights into the
@@ -227,15 +271,13 @@
             requirements of the local audition community.
           </p>
           <div>
+            <!-- image wrapper -->
             <picture>
               <source
                 srcset="./img/sl8/1x/userpersonas@1x.jpg"
                 media="(max-width:767px)"
               />
-              <img
-                src="./img/sl8/2x/userpersonas@2x.jpg"
-                alt="SL8 SL8IDesktop_mockups"
-              />
+              <img src="./img/sl8/2x/userpersonas@2x.jpg" alt="user personas" />
             </picture>
           </div>
         </div>
@@ -254,51 +296,51 @@
                 srcset="./img/sl8/1x/sl8userflow@1x.png"
                 media="(max-width:767px)"
               />
-              <img
-                src="./img/sl8/2x/sl8userflow@2x.png"
-                alt="SL8 SL8IDesktop_mockups"
-              />
+              <img src="./img/sl8/2x/sl8userflow@2x.png" alt="SL8 user flows" />
             </picture>
           </div>
         </div>
-        <div>
-          <h2>Lo-fidelity Wireframes</h2>
-          <p>
-            Low- and mid-fidelity wireframes were developed to establish layout,
-            interactions, and content hierarchy. I focused on simplifying the
-            interface and prioritizing intuitive actions, like swiping and
-            filtering by location or experience. This evolved into a
-            high-fidelity prototype informed by iterative feedback.
-          </p>
-          <div>
-            <picture>
-              <source
-                srcset="./img/sl8/1x/sl8lofi@1x.png"
-                media="(max-width:767px)"
-              />
-              <img
-                src="./img/sl8/2x/sl8lofi@2x.png"
-                alt="SL8 SL8IDesktop_mockups"
-              />
-            </picture>
+        <div class="wireframes-container">
+          <div class="lo-fidelity">
+            <h2>Lo-fidelity Wireframes</h2>
+            <p>
+              Low- and mid-fidelity wireframes were developed to establish
+              layout, interactions, and content hierarchy. I focused on
+              simplifying the interface and prioritizing intuitive actions, like
+              swiping and filtering by location or experience. This evolved into
+              a high-fidelity prototype informed by iterative feedback.
+            </p>
+            <div>
+              <picture>
+                <source
+                  srcset="./img/sl8/1x/sl8lofi@1x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./img/sl8/2x/sl8lofi@2x.png"
+                  alt="SL8 low-fidelity wireframe mockup"
+                />
+              </picture>
+            </div>
+          </div>
+          <div class="mid-fidelity">
+            <h2>Mid-fidelity Wireframes</h2>
+            <div>
+              <picture>
+                <source
+                  srcset="./img/sl8/1x/midwireframe@1x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./img/sl8/2x/midwireframe@2x.png"
+                  alt="SL8 mid-fidelity wireframe mockup"
+                />
+              </picture>
+            </div>
           </div>
         </div>
         <div>
-          <h2>Mid-fidelity Wireframes</h2>
-          <div>
-            <picture>
-              <source
-                srcset="./img/sl8/1x/midwireframe@1x.png"
-                media="(max-width:767px)"
-              />
-              <img
-                src="./img/sl8/2x/midwireframe@2x.png"
-                alt="SL8 SL8IDesktop_mockups"
-              />
-            </picture>
-          </div>
-        </div>
-        <div>
+          <!-- testing-iteration-section -->
           <h2>Testing & Iteration</h2>
           <p>
             User feedback helped refine the swipe interface, profile cards, and
@@ -306,10 +348,31 @@
             trust, ease of use, and discoverability, ensuring the final design
             addressed both user needs and business goals.
           </p>
-        </div>
-        <div>
-          <h2>UI Design</h2>
+          <em>Prototype prior to user testing</em>
           <div>
+            <picture>
+              <source
+                srcset="./img/sl8/1x/previous-midwire@1x.png"
+                media="(max-width:767px)"
+              />
+              <img
+                src="./img/sl8/2x/previous-midwire@2x.png"
+                alt="SL8 mid-fidelity wireframe from earlier design iteration"
+              />
+            </picture>
+            <p class="caption">
+              <!-- This version lacked clear call-to-actions and sufficient visual
+              hierarchy, which users found confusing. Feedback led to stronger
+              layout structure, better labeling, and improved swipe behavior in
+              the final design. -->
+            </p>
+          </div>
+        </div>
+        <div class="section">
+          <!-- ui design section -->
+          <h2>UI Design</h2>
+          <div class="branding">
+            <!-- branding -->
             <h3>Branding & Visual Design</h3>
             <p>
               I designed a bold, expressive visual identity that reflected the
@@ -318,13 +381,148 @@
               crafted to feel modern, inclusive, and user-friendly.
             </p>
             <div>
+              <!-- image-wrapper -->
               <picture>
                 <source
-                  srcset="./img/sl8/1x/sl8mockup@1x.jpg"
+                  srcset="./img/sl8/1x/moodboard@1x.jpg"
                   media="(max-width:767px)"
                 />
                 <img
-                  src="./img/sl8/2x/sl8mockup2x.jpg"
+                  src="./img/sl8/2x/moodboard@2x.jpg"
+                  alt="SL8 SL8IDesktop_mockups"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="high-fidelity content">
+          <!-- high-fidelity content  -->
+          <h2>High Fidelity</h2>
+          <div>
+            <!-- Create Account & Sign In -->
+            <h3>Create Account & Sign In</h3>
+            <div>
+              <!-- row -->
+              <div>
+                <!-- column -->
+                <p>
+                  SL8 offers a clean, bold entry point — where actors begin
+                  their journey to shine, and casting directors discover their
+                  next star.
+                </p>
+              </div>
+              <div>
+                <!-- column -->
+                <picture>
+                  <source
+                    srcset="./img/sl8/1x/login@1x.png"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./img/sl8/2x/login@2x.png"
+                    alt="SL8 SL8IDesktop_mockups"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Home Screen & Settings</h3>
+            <div>
+              <!-- row -->
+              <div>
+                <!-- column -->
+                <p>
+                  Navigate effortlessly from the Homepage to your Settings to
+                  personalize your profile and access powerful shortcuts.
+                </p>
+              </div>
+              <div>
+                <!-- column -->
+                <picture>
+                  <source
+                    srcset="./img/sl8/1x/Home-settings@1x.png"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./img/sl8/2x/Home-settings@2x.png"
+                    alt="SL8 SL8IDesktop_mockups"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Filter Screen & Discover Talent</h3>
+            <div>
+              <!-- row -->
+              <div>
+                <!-- column -->
+                <p>
+                  With the <span>'Find Talent'</span> button, dive straight into
+                  the <span>Discover Page </span> or apply tailored filters
+                  directly from the Homepage. Easily select top-tier talent that
+                  perfectly aligns with your project needs, ensuring you connect
+                  with the best fit every time.
+                </p>
+                <p>
+                  Customize your <span>filter</span> selections to effortlessly
+                  discover talents that perfectly match your needs. When you
+                  navigate to the <span>Discover Page </span>, you can
+                  seamlessly save your favorite profiles for later review.
+                </p>
+                <p>
+                  Simply tap the <span> 'X'</span> to <span> cancel</span>,
+                  click <span>Star</span>to <span>add</span> talents to your
+                  <span>Favorites Collection</span>, and use the
+                  <span>thumbs-up icon </span>to <span> like</span> standout
+                  talents.
+                </p>
+              </div>
+              <div>
+                <!-- column -->
+                <picture>
+                  <source
+                    srcset="./img/sl8/1x/filter-discover@1x.png"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./img/sl8/2x/filter-discover@2x.png"
+                    alt="SL8 SL8IDesktop_mockups"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- section block -->
+            <h3>Favorites View: Left Screen</h3>
+            <p>
+              This screen allows users (casting directors or actors) to view and
+              manage their saved profiles. It highlights quick-access info like
+              name, role, union status, and distance — making it easy to revisit
+              and engage with promising talent.
+            </p>
+            <h3>Talent Profile Overview: Middle Screen</h3>
+            <p>
+              Displays the full public actor profile, allowing users to view
+              details, message, or book talent. This screen provides a rich
+              overview of the actor's background and specialties.
+            </p>
+            <h3>Casting Message Interaction: Right Screen</h3>
+            <p>
+              Displays the full public actor profile, allowing users to view
+              details, message, or book talent. This screen provides a rich
+              overview of the actor's background and specialties.
+            </p>
+            <div>
+              <picture>
+                <source
+                  srcset="./img/sl8/1x/fav-about-message@1x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./img/sl8/2x/fav-about-message@2x.png"
                   alt="SL8 SL8IDesktop_mockups"
                 />
               </picture>
@@ -332,107 +530,17 @@
           </div>
         </div>
         <div>
-          <h2>High Fidelity</h2>
-          <h3>Create Account & Sign IN</h3>
+          <!-- container mockups -->
+          <h2>Responsive Design Mockups</h2>
           <div>
             <!-- row -->
             <div>
               <!-- column -->
-              <picture> </picture>
-            </div>
-            <div>
-              <!-- column -->
-              <p>
-                SL8 offers a clean, bold entry point — where actors begin their
-                journey to shine, and casting directors discover their next
-                star.
-              </p>
             </div>
           </div>
         </div>
         <div>
-          <h3>Home Screen & Settings</h3>
-          <div>
-            <!-- row -->
-            <div>
-              <!-- column -->
-              <picture> </picture>
-            </div>
-            <div>
-              <!-- column -->
-              <p>
-                Navigate effortlessly from the Homepage to your Settings to
-                personalize your profile and access powerful shortcuts.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h3>Filter Screen & Discover Talent</h3>
-          <div>
-            <!-- row -->
-            <div>
-              <!-- column -->
-              <picture> </picture>
-            </div>
-            <div>
-              <!-- column -->
-              <p>
-                With the <span>'Find Talent'</span> button, dive straight into
-                the <span>Discover Page </span> or apply tailored filters
-                directly from the Homepage. Easily select top-tier talent that
-                perfectly aligns with your project needs, ensuring you connect
-                with the best fit every time.
-              </p>
-              <p>
-                Customize your <span>filter</span> selections to effortlessly
-                discover talents that perfectly match your needs. When you
-                navigate to the <span>Discover Page </span>, you can seamlessly
-                save your favorite profiles for later review.
-              </p>
-              <p>
-                Simply tap the <span> 'X'</span> to <span> cancel</span>, click
-                <span>Star</span>to <span>add</span> talents to your
-                <span>Favorites Collection</span>, and use the
-                <span>thumbs-up icon </span>to <span> like</span> standout
-                talents.
-              </p>
-              <div>
-                <picture></picture>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h3>Favorites View: Left Screen</h3>
-          <p>
-            This screen allows users (casting directors or actors) to view and
-            manage their saved profiles. It highlights quick-access info like
-            name, role, union status, and distance — making it easy to revisit
-            and engage with promising talent.
-          </p>
-          <div>
-            <picture></picture>
-          </div>
-        </div>
-        <div>
-          <h3>Talent Profile Overview: Middle Screen</h3>
-          <p>
-            Displays the full public actor profile, allowing users to view
-            details, message, or book talent. This screen provides a rich
-            overview of the actor's background and specialties.
-          </p>
-          <div>
-            <h3>Casting Message Interaction: Right Screen</h3>
-            <p>
-              Displays the full public actor profile, allowing users to view
-              details, message, or book talent. This screen provides a rich
-              overview of the actor's background and specialties.
-            </p>
-          </div>
-        </div>
-        <div>
-          <h3>Conclusion</h3>
+          <h2>Conclusion</h2>
           <p>
             <b>SL8</b> is the result of a human-centered, iterative design
             process informed by both personal experience and user research. The
