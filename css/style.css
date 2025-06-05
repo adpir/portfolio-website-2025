@@ -1,0 +1,111 @@
+/* 
+   licorice olor: #09000F;
+  Electric Violet #9400FF
+  Thistle #ECD1FF
+Magnolia #FBF5FF
+ */
+
+
+
+@font-face {
+    font-family: 'Reiswar';
+    src: url('../fonts/Reiswar.woff2') format('woff2'),
+        url('../fonts/Reiswar.woff') format('woff'),
+        url('../fonts/Reiswar.ttf')   format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.font-heading {
+  font-family: 'Reiswar', sans-serif;
+  font-weight: 200;
+  font-size: 5em;
+  line-height: 1.1;
+  color: #9400FF;
+  margin: 0;
+}
+body {
+  background-color: #FBF5FF; /* Magnolia */
+  font-family: 'Lora', serif;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight:400; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #09000F;
+  
+  
+}h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  color: #9400FF; /* Electric Violet */
+}
+body, p, li {
+  font-family: 'Lora', serif;
+  font-weight: 400;       /* Regular */
+  font-size: 1rem;        /* 16px */
+  line-height: 1.6;       /* ~26px */
+  color: #09000F;         /* Licorice or your chosen dark text color */
+  margin: 0 0 1rem 0;     /* spacing between paragraphs */
+}
+img {
+  width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners to images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to images */
+}
+.button {
+  display: inline-block;
+  background-color: #9400FF;      /* Electric Violet */
+  color: #FBF5FF;  
+  font-weight: 400;
+  padding: 10px 20px; /* Adjusts the padding for the button */
+  border-radius: 5px;
+  border-bottom: 2px solid #09000F; 
+  transition: 0.2s opacity;
+   /* border-radius: 3px;
+  border-bottom: 2px solid #eeeeee; 
+  transition: 0.2s opacity; */
+  /* font-size: 16px;
+  font-family: 'Lora', serif; */
+  /* border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(148,0,255,0.08); */
+}
+.button:hover {
+  /* background-color: #cc7fff; */     /* Lighter violet - Uncomment if a lighter hover effect is needed */
+  /* color: #09000F;    */            /* Licorice - Uncomment if hover text color change is required */
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;               /* Licorice */
+}
+
+.button:focus {
+  outline: 2px solid #ECD1FF;     /* Thistle */
+  /* outline-offset: 2px;  Adjusts the space between the outline and the element */
+  /* background-color: #b266ff;  Optional background color for focus state */
+}
+
+.button:active {
+  background-color: #ECD1FF;      /* Darker violet */
+}
+.button.contact {
+  background-color: transparent;
+  color: #9400FF;
+  text-transform: uppercase;
+  border: 2px solid #9400FF;
+}
+.button.contact:hover {
+  background-color: #9400FF;
+  color: #FBF5FF;
+}
+
+/* .button.contact {
+  background-color: transparent;
+  color: var(--contact-color);
+  text-transform: uppercase;
+  border: 2px solid var(--contact-color);
+}
+
+.button.contact:hover {
+  background-color: var(--contact-color);
+  color: #a13232;
+} */
