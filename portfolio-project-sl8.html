@@ -4,8 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI/UX Developer</title>
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
   <body>
     <header>
@@ -17,69 +28,83 @@
         />
         <nav>
           <ul>
-            <li><a href="sl8.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a class="menu-links" href="portfolio-project-sl8.html">Work</a>
+            </li>
+            <li><a class="menu-links" href="about.html">About</a></li>
+            <li><a class="menu-links" href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section class="main-section">
+      <article class="main-section">
+        <!-- change to article for the whole section  -->
         <div>
           <h1>SL8:<span> Discover Stars. Cast with Confidence.</span></h1>
         </div>
         <!-- Section of project intro -->
-        <div class="project-container">
-          <div class="about-column1">
-            <!--column of project description: left side-->
-            <p>
-              Design a location-based platform that connects actors with casting
-              directors, simplifying the discovery and networking process for
-              local productions.
-            </p>
+        <div class="project-intro-section">
+          <div class="row">
+            <div class="about-column">
+              <!--column of project description: left side-->
+              <p>
+                Design a location-based platform that connects actors with
+                casting directors, simplifying the discovery and networking
+                process for local productions.
+              </p>
+            </div>
+            <!-- Right Side -->
+            <div class="column">
+              <div class="row">
+                <div class="column2">
+                  <!--first column block of content -->
+                  <div>Project</div>
+                  <div>Case Study</div>
+                  <div>Responsive Design</div>
+                </div>
+                <div class="column3">
+                  <!--second column block of content -->
+                  <div>Role</div>
+                  <div>UX Research & Strategy</div>
+                  <div>UI Design</div>
+                  <div>Validation</div>
+                </div>
+                <div class="duration-column">
+                  <!--thrid column block of content -->
+                  <div>Duration</div>
+                  <div>6 Weeks</div>
+                  <div>2024</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Right Side -->
-          <div class="wrapper-columns">
-            <div class="column2">
-              <!--first column block of content -->
-              <div>Project</div>
-              <div>Case Study</div>
-              <div>Responsive Design</div>
-            </div>
-            <div class="column3">
-              <!--second column block of content -->
-              <div>Role</div>
-              <div>UX Research & Strategy</div>
-              <div>UI Design</div>
-              <div>Validation</div>
-            </div>
-            <div class="column4">
-              <!--thrid column block of content -->
-              <div>Duration</div>
-              <div>6 Weeks</div>
-              <div>2024</div>
-            </div>
+        </div>
+        <section>
+          <div>
+            <!-- image wrapper -->
+            <picture>
+              <source
+                srcset="./img/sl8/1x/SL8@1x.jpg"
+                media="(max-width:767px)"
+              />
+              <img
+                src="./img/sl8/2x/SL8@2x.jpg"
+                alt="SL8 SL8IDesktop_mockups"
+              />
+            </picture>
           </div>
-        </div>
-        <div>
-          <!-- image wrapper -->
-          <picture>
-            <source
-              srcset="./img/sl8/1x/SL8@1x.jpg"
-              media="(max-width:767px)"
-            />
-            <img src="./img/sl8/2x/SL8@2x.jpg" alt="SL8 SL8IDesktop_mockups" />
-          </picture>
-        </div>
-        <div class="quote-container">
-          <blockquote>
-            <p>
-              Looking for your next star? Discover talented actors nearby and
-              cast locally — where great stories begin close to home.
-            </p>
-          </blockquote>
-        </div>
+        </section>
+        <section>
+          <div class="quote-container">
+            <blockquote>
+              <p>
+                Looking for your next star? Discover talented actors nearby and
+                cast locally — where great stories begin close to home.
+              </p>
+            </blockquote>
+          </div>
+        </section>
         <div>
           <div>
             <picture>
@@ -179,46 +204,47 @@
                   alt="SL8 SL8IDesktop_mockups"
                 />
               </picture>
-              <div>
-                <!-- Insights right side column -->
-                <h4>Key Comparative Insights:</h4>
-                <ul>
-                  <li>
-                    At <span>100%</span>, there's a direct connection between
-                    users' concerns about trust and their desire for advanced
-                    filtering to validate credibility.
-                  </li>
-                  <li>
-                    At <span>67%</span>, both pain points and features reveal a
-                    need for more transparent, detailed project descriptions.
-                  </li>
-                  <li>
-                    At <span>67%</span>, there's a clear alignment between
-                    challenges and features regarding location-based talent
-                    discovery, emphasizing its significance.
-                  </li>
-                  <li>
-                    Lastly, at <span>33%</span>, users' desire for more
-                    personalized project matching corresponds with their need
-                    for greater flexibility in content sharing and uploads.
-                  </li>
-                </ul>
-              </div>
+            </div>
+            <!-- closing tag column -->
+            <div>
+              <!-- Insights right side column -->
+              <h4>Key Comparative Insights:</h4>
+              <ul>
+                <li>
+                  At <span>100%</span>, there's a direct connection between
+                  users' concerns about trust and their desire for advanced
+                  filtering to validate credibility.
+                </li>
+                <li>
+                  At <span>67%</span>, both pain points and features reveal a
+                  need for more transparent, detailed project descriptions.
+                </li>
+                <li>
+                  At <span>67%</span>, there's a clear alignment between
+                  challenges and features regarding location-based talent
+                  discovery, emphasizing its significance.
+                </li>
+                <li>
+                  Lastly, at <span>33%</span>, users' desire for more
+                  personalized project matching corresponds with their need for
+                  greater flexibility in content sharing and uploads.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="container-analysis">
-          <div class="row-analysis">
-            <div class="column-analysis">
-              <h2>Competitive Analysis</h2>
-              <p>
-                To better understand the gaps in the current casting experience,
-                I conducted a competitive analysis of platforms like
-                <span>BeScene</span> and <span>Project Casting</span>. While
-                both aim to connect talent with opportunities, they fall short
-                in several key areas.
-              </p>
-            </div>
+        <div>
+          <div class="container">
+            <h2>Competitive Analysis</h2>
+            <p>
+              To better understand the gaps in the current casting experience, I
+              conducted a competitive analysis of platforms like
+              <span>BeScene</span> and <span>Project Casting</span>. While both
+              aim to connect talent with opportunities, they fall short in
+              several key areas.
+            </p>
+          </div>
+          <div>
             <ul>
               <li>Poor SEO performance, limiting visibility and reach</li>
               <li>
@@ -232,31 +258,31 @@
                 Fonts and text are difficult to read, affecting accessibility
               </li>
             </ul>
-            <div class="image-row">
-              <div class="image-column1">
-                <picture>
-                  <source
-                    srcset="./img/sl8/1x/BeScene@1x.jpg"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="./img/sl8/2x/BeScene@2x.jpg"
-                    alt="casting site BeScene"
-                  />
-                </picture>
-              </div>
-              <div class="image-column2">
-                <picture>
-                  <source
-                    srcset="./img/sl8/1x/projectcasting@1x.jpg"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="./img/sl8/2x/projectcasting@2x.jpg"
-                    alt="casting site project casting"
-                  />
-                </picture>
-              </div>
+          </div>
+          <div class="image-row">
+            <div class="image-column1">
+              <picture>
+                <source
+                  srcset="./img/sl8/1x/BeScene@1x.jpg"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./img/sl8/2x/BeScene@2x.jpg"
+                  alt="casting site BeScene"
+                />
+              </picture>
+            </div>
+            <div class="image-column2">
+              <picture>
+                <source
+                  srcset="./img/sl8/1x/projectcasting@1x.jpg"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./img/sl8/2x/projectcasting@2x.jpg"
+                  alt="casting site project casting"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -566,7 +592,7 @@
             industry through thoughtful, purpose-driven design.
           </p>
         </div>
-      </section>
+      </article>
     </main>
     <footer id="contact">
       <div>

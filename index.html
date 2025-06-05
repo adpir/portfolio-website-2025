@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI/UX Developer</title>
-    <!-- <link rel="stylesheet" href="style.css">  -->
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
-  <body>
-    <header>
+  <body id="home-page" class="portfolio">
+    <header id="navbar">
       <div>
         <img
           src="./img/logo/SVG/mind.svg"
@@ -17,16 +28,18 @@
         />
         <nav>
           <ul>
-            <li><a href="sl8.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a class="menu-links" href="portfolio-project-sl8.html">Work</a>
+            </li>
+            <li><a class="menu-links" href="about.html">About</a></li>
+            <li><a class="menu-links" href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
       <section>
-        <div>
+        <div class="hero">
           <h1>Hi, I'm <span>Alice Piar</span>!</h1>
           <h2>I'm a UI/UX developer from Minneapolis, MN.</h2>
           <p>
@@ -38,7 +51,7 @@
         </div>
       </section>
       <section>
-        <div>
+        <div class="project-container">
           <h2>Featured Projects</h2>
           <div>
             <div>
@@ -57,15 +70,11 @@
               <h3>Pixy Fund</h3>
               <p>
                 Pixy Fund was designed to help users easily reach their savings
-                goals with a visually appealing, mobilefriendly approach.
-                Through user research and design thinking, I created user flows,
-                wireframes, and a calming user interface (UI). The result is an
-                accessible and trustworthy financial app encouraging users to
-                track their progress, automate savings with round-ups, and stay
-                motivated with personalized dashboards.
+                goals with a visually appealing, mobilefriendly approach. I
+                created user flows, wireframes, and a calming UI.
               </p>
               <p>UI/UX, Figma, Prototype, Accessibility (WCAG)</p>
-              <p><a href="ReadMore">Read More</a></p>
+              <p><a href="#" class="button">Read More</a></p>
             </div>
           </div>
           <div>
@@ -84,14 +93,12 @@
             <div>
               <h3>SL8:<span> Uncovers Stars. Cast with Confidence.</span></h3>
               <p>
-                Born from my own experience as an actor, SL8 addresses the
-                struggle of finding roles and making connections. Through user
-                research, iterative wireframes, and testing, I designed a bold,
-                intuitive platform that helps actors showcase their talent and
-                helps casting directors find the right fit.
+                Born from my own experience as an actor, SL8 helps actors
+                showcase their talent and helps casting directors find the right
+                fit.
               </p>
               <p>UI/UX, Figma, Responsive Design</p>
-              <p><a href="ReadMore">Read More</a></p>
+              <p><a href="#" class="button">Read More</a></p>
             </div>
           </div>
         </div>
@@ -101,21 +108,22 @@
       <div>
         <h2>Let's Create Together</h2>
         <p>
-          Do you like my work and want to discuss opportunities? Please get in
-          touch.
+          If you like my work and want to discuss opportunities, get in touch.
         </p>
         <div>
-          <a href="mailto@adpir.creativedesign@gmail.com">Email me</a>
+          <a class="button contact" href="mailto:adpir.creativedesign@gmail.com"
+            >Email me</a
+          >
         </div>
         <div>
-          <a href="www.linkedin.com/in/alicepiar" target="blank">
-            <img src="./img/icons/linkedin.svg" alt="linkedIn" />
+          <a href="https://www.linkedin.com/in/alicepiar" target="_blank">
+            <img src="./img/icons/linkedin.svg" alt="LinkedIn" />
           </a>
-          <a href="Behance-Profile" target="_blank">
-            <img src="./img/icons/behance.svg" alt="BehanceProfile" />
+          <a href="https://www.behance.net/alicepiar" target="_blank">
+            <img src="./img/icons/behance.svg" alt="Behance" />
           </a>
         </div>
-        <p>Copyright @ Alice Piar 2025</p>
+        <p>&copy; Alice Piar 2025</p>
       </div>
     </footer>
   </body>
