@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI/UX Developer</title>
+    <title>UI/UX Developer Home</title>
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
     <link
       rel="stylesheet"
@@ -13,10 +13,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release-pro/v4.0.8/css/solid.css?key=8a31f260-6b6a-11ef-8ebd-0242ac140003"
+    />
   </head>
   <body id="home-page" class="portfolio">
     <header id="navbar">
@@ -26,13 +31,13 @@
           style="width: 100px; height: 100px"
           alt="Mind Logo"
         />
-        <nav>
+        <nav class="nav-column">
           <ul>
             <li>
-              <a class="menu-links" href="portfolio-project-sl8.html">Work</a>
+              <a href="index.html">Work</a>
             </li>
-            <li><a class="menu-links" href="about.html">About</a></li>
-            <li><a class="menu-links" href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -40,8 +45,13 @@
     <main>
       <section>
         <div class="hero">
-          <h1 class="font-heading">Hi, I'm <span>Alice Piar</span>!</h1>
-          <h2>I'm a UI/UX developer from Minneapolis, MN.</h2>
+          <h1 class="font-heading">
+            Hi, I'm <span class="hero-name">Alice Piar</span>!
+          </h1>
+          <h2>
+            I'm a <em class="hero-title">UI/UX developer </em> from Minneapolis,
+            MN.
+          </h2>
           <p>
             I'm a <strong>creative problem-solver</strong> with a background in
             full-stack development, UI/UX Design, and program management. I
@@ -50,11 +60,11 @@
           </p>
         </div>
       </section>
-      <section>
+      <section class="main-section">
         <div class="project-container">
           <h2>Featured Projects</h2>
           <div>
-            <div>
+            <div class="project-image-col">
               <picture>
                 <source
                   srcset="./img/pixyfund/1x/Pixyfund@1x.jpg"
@@ -66,7 +76,7 @@
                 />
               </picture>
             </div>
-            <div>
+            <div class="project-text-col">
               <h3>Pixy Fund</h3>
               <p>
                 Pixy Fund was designed to help users easily reach their savings
@@ -78,7 +88,7 @@
             </div>
           </div>
           <div>
-            <div>
+            <div class="project-image-col">
               <picture>
                 <source
                   srcset="./img/sl8/1x/SL8@1x.jpg"
@@ -90,7 +100,7 @@
                 />
               </picture>
             </div>
-            <div>
+            <div class="project-text-col">
               <h3>SL8:<span> Uncovers Stars. Cast with Confidence.</span></h3>
               <p>
                 Born from my own experience as an actor, SL8 helps actors
@@ -98,33 +108,34 @@
                 fit.
               </p>
               <p>UI/UX, Figma, Responsive Design</p>
-              <p><a href="#" class="button">Read More</a></p>
+              <div><a href="#" class="button">Read More</a></div>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer id="contact">
-      <div>
+      <div class="project-text-col">
         <h2>Let's Create Together</h2>
         <p>
           If you like my work and want to discuss opportunities, get in touch.
+          <br />
+          I'm always open to new projects and collaborations.
         </p>
-        <div>
-          <a class="button contact" href="mailto:adpir.creativedesign@gmail.com"
-            >Email me</a
-          >
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/alicepiar" target="_blank">
-            <img src="./img/icons/linkedin.svg" alt="LinkedIn" />
-          </a>
-          <a href="https://www.behance.net/alicepiar" target="_blank">
-            <img src="./img/icons/behance.svg" alt="Behance" />
-          </a>
-        </div>
-        <p>&copy; Alice Piar 2025</p>
+        <a class="button contact" href="mailto:adpir.creativedesign@gmail.com"
+          >Email me</a
+        >
       </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/alicepiar" target="_blank">
+          <img src="./img/icons/linkedin.svg" alt="Access LinkedIn Profile" />
+          <!-- <i class="fa-brands fa-linkedin"></i> -->
+        </a>
+        <a href="https://www.behance.net/alicepiar1" target="_blank">
+          <img src="./img/icons/behance.svg" alt="Access Behance Portfolio" />
+        </a>
+      </div>
+      <p>&copy; Alice Piar 2025</p>
     </footer>
   </body>
 </html>

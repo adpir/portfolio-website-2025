@@ -13,10 +13,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
   </head>
   <body>
     <header>
@@ -26,25 +31,25 @@
           style="width: 100px; height: 100px"
           alt="Mind Logo"
         />
-        <nav>
+        <nav class="nav-column">
           <ul>
             <li>
-              <a class="menu-links" href="portfolio-project-sl8.html">Work</a>
+              <a href="index.html">Work</a>
             </li>
-            <li><a class="menu-links" href="about.html">About</a></li>
-            <li><a class="menu-links" href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
       <section>
-        <div>
+        <div class="about">
           <h1>About</h1>
         </div>
       </section>
-      <section>
-        <div>
+      <section class="about-content">`
+        <div class="image-column">
           <picture>
             <source
               srcset="./img/sl8/1x/AlicePiarPhoto@1x.jpg"
@@ -94,12 +99,14 @@
                 continue to shape my perspective as a thoughtful, empathetic
                 designer.
               </p>
-              <a href="./files/alicepiar-resume.pdf"> Download Resume</a>
+              <a class="button" href="./files/alicepiar-resume.pdf">
+                Download Resume</a
+              >
             </div>
-            <div>
+            <div class="column">
               <h2>My Skills & Tools</h2>
-              <div>
-                <div>
+              <div class="skills-tools">
+                <div class="skills">
                   <h3>Relevant Skills</h3>
                   <ul>
                     <li>UI/UX Design</li>
@@ -111,7 +118,7 @@
                     <li>Problem-Solver & Detail Oriented</li>
                   </ul>
                 </div>
-                <div>
+                <div class="tools">
                   <h3>Tools I use</h3>
                   <ul>
                     <li>
