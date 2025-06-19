@@ -65,6 +65,14 @@ img {
   height: auto;
   border-radius: 8px; /* Optional: adds rounded corners to images */
 }
+a {
+text-decoration: underline;
+color: #0B0011;
+}
+a:hover{
+  color: #9400ff; /* Electric Violet */
+  text-decoration: none; /* Removes underline on hover */
+}
 
 .button {
   display: inline-block;
@@ -80,6 +88,7 @@ img {
 .button:hover {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
   text-decoration: none; /* Licorice */
+    color: #fbf5ff;
 }
 
 .button:focus {

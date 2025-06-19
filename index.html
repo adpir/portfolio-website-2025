@@ -24,8 +24,8 @@
     />
   </head>
   <body id="home-page" class="portfolio">
-    <header id="navbar">
-      <div>
+    <header id="header">
+      <div class="header-container">
         <img
           src="./img/logo/SVG/mind.svg"
           style="width: 100px; height: 100px"
@@ -43,8 +43,8 @@
       </div>
     </header>
     <main>
-      <section>
-        <div class="hero">
+      <section id="hero">
+        <div class="container">
           <h1 class="font-heading">
             Hi, I'm <span class="hero-name">Alice Piar</span>!
           </h1>
@@ -61,61 +61,62 @@
         </div>
       </section>
       <section class="main-section">
-        <div class="project-container">
-          <h2>Featured Projects</h2>
-
-          <div>
-            <div class="project-image-col">
-              <picture>
-                <source
-                  srcset="./img/sl8/1x/SL8@1x.jpg"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="./img/sl8/2x/SL8@2x.jpg"
-                  alt="A mockup project for SL8"
-                />
-              </picture>
+        <div id="work">
+          <div class="project-container">
+            <h2>Featured Projects</h2>
+            <div>
+              <div class="project-image-col">
+                <picture>
+                  <source
+                    srcset="./img/sl8/1x/SL8@1x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./img/sl8/2x/SL8@2x.jpg"
+                    alt="A mockup project for SL8"
+                  />
+                </picture>
+              </div>
+              <div class="project-text-col">
+                <h3>SL8:<span> Uncovers Stars. Cast with Confidence.</span></h3>
+                <p>
+                  Born from my own experience as an actor, SL8 helps actors
+                  showcase their talent and helps casting directors find the
+                  right fit.
+                </p>
+                <p>UI/UX, Figma, Responsive Design</p>
+                <p>
+                  <a href="portfolio-project-sl8.html" class="button"
+                    >Read More</a
+                  >
+                </p>
+              </div>
             </div>
-            <div class="project-text-col">
-              <h3>SL8:<span> Uncovers Stars. Cast with Confidence.</span></h3>
-              <p>
-                Born from my own experience as an actor, SL8 helps actors
-                showcase their talent and helps casting directors find the right
-                fit.
-              </p>
-              <p>UI/UX, Figma, Responsive Design</p>
-              <p>
-                <a href="portfolio-project-sl8.html" class="button"
-                  >Read More</a
-                >
-              </p>
-            </div>
-          </div>
-          <div>
-            <div class="project-image-col">
-              <picture>
-                <source
-                  srcset="./img/pixyfund/1x/Pixyfund@1x.jpg"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="./img/pixyfund/2x/Pixyfund@2x.jpg"
-                  alt="A mockup project for Pixy Fund"
-                />
-              </picture>
-            </div>
-            <div class="project-text-col">
-              <h3>Pixy Fund</h3>
-              <p>
-                Pixy Fund was designed to help users easily reach their savings
-                goals with a visually appealing, mobilefriendly approach. I
-                created user flows, wireframes, and a calming UI.
-              </p>
-              <p>UI/UX, Figma, Prototype, Accessibility (WCAG)</p>
-              <p>
-                <a href="#" class="button">Read More</a>
-              </p>
+            <div>
+              <div class="project-image-col">
+                <picture>
+                  <source
+                    srcset="./img/pixyfund/1x/Pixyfund@1x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./img/pixyfund/2x/Pixyfund@2x.jpg"
+                    alt="A mockup project for Pixy Fund"
+                  />
+                </picture>
+              </div>
+              <div class="project-text-col">
+                <h3>Pixy Fund</h3>
+                <p>
+                  Pixy Fund was designed to help users easily reach their
+                  savings goals with a visually appealing, mobilefriendly
+                  approach. I created user flows, wireframes, and a calming UI.
+                </p>
+                <p>UI/UX, Figma, Prototype, Accessibility (WCAG)</p>
+                <p>
+                  <a href="#" class="button">Read More</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
