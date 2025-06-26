@@ -5,22 +5,87 @@
     Thistle: #ECD1FF
     Magnolia: #FBF5FF
 */
-
-.font-heading {
-  font-family: 'Lora', serif;
-  font-weight: 200;
-  font-size: 5em;
-  line-height: 1.1;
-  color: #0a030e; /* Licorice */
+* {
+  box-sizing: border-box;
+}
+::-moz-selection { /* Code for Firefox */
+color: #9400FF;
+background: #FBF5FF;
 }
 
+::selection {
+color: #9400FF;
+background: #FBF5FF;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+
+  }
+ 
+  .project-container {
+     padding: 0 30px;
+
+  }
+ .font-heading {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 5em;
+  line-height: 1.1;
+  color: #FBF5FF; 
+  display: block;
+  text-align: start;
+  position:relative
+} 
+
+
+.font-body{
+  color:#fbf5ff
+}
+/* .developer{
+  color: #9400FF; 
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-top: 10px;
+} */
+
+/* .creative {
+  color: #9400FF; 
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-top: 10px;
+} */
 body {
-  background-color: #fbf5ff; /* Magnolia */
+  background-color: #FBF5FF; /* Magnolia */
   font-family: "Space Grotesk", sans-serif;
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 400; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-  color: #0a030e;
+  color: #100217;
+}
+
+.center {
+  text-align: center; /* Centers text */
+}
+
+header {
+  background-color: #0a030e;
+  padding: 10px;
+    text-align: center;
+    box-shadow: #ffffff;
+    position: relative;
+}
+
+  /* main {
+  padding-top: 133px;
+} */
+#hero {
+  background-color: #0a030e;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
 }
 
 h1,
@@ -62,12 +127,13 @@ li {
 
 img {
   width: 100%;
-  height: auto;
-  border-radius: 8px; /* Optional: adds rounded corners to images */
+  /* height: auto; */
+  border-radius: 20px; /* Optional: adds rounded corners to images */
 }
+
 a {
 text-decoration: underline;
-color: #0B0011;
+color: #fbf5ff;
 }
 a:hover{
   color: #9400ff; /* Electric Violet */
@@ -80,15 +146,17 @@ a:hover{
   color: #fbf5ff;
   font-weight: 400;
   padding: 10px 20px; /* Adjusts the padding for the button */
-  border-radius: 5px;
-  border-bottom: 1px solid #0a030e;
+  border-radius: 70px;
+  /* border-bottom: 1px solid #0a030e; */
   transition: 0.2s opacity;
+
 }
 
 .button:hover {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
   text-decoration: none; /* Licorice */
-    color: #fbf5ff;
+  color: #fbf5ff;
+
 }
 
 .button:focus {
@@ -98,7 +166,10 @@ a:hover{
 .button:active {
   background-color: #ecd1ff; /* Darker violet */
 }
-
+/* Remove underline from button or link */
+button, .button, a.button {
+  text-decoration: none;
+}
 .button.contact {
   background-color: transparent;
   color: #9400ff;
@@ -111,14 +182,93 @@ a:hover{
   color: #fbf5ff;
 }
 
-/* 1) Ensure the “container” does not fill the entire browser width (optional) */
-.container {
-  max-width: 1200px;
-  margin-left: auto;   /* center the container */
-  margin-right: auto;
-  padding-left: 1rem;  /* gutter on small screens */
-  padding-right: 1rem;
+.logo #header{
+  max-width: 250px;
+  text-align: center;
+  }
+
+footer#contact h2 { margin-bottom: 1rem; }
+footer#contact p { margin-bottom: 1rem; }
+footer#contact .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  
 }
+footer {
+  background-color: #0a030e; /* Licorice */
+  padding-top: 40px; /* Adds padding to the top of the footer */
+}
+
+
+.create-text{
+  color:#9400ff;
+  text-transform: uppercase;
+ font-style: italic;
+}
+  nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fbf5ff; }
+
+.row {
+  margin: 25px 0; 
+  /* 25px top and bottom, 0 left and right */
+}
+.chip  {
+  display: inline-block;
+  margin: 0 10px 10px 0; /* Adds space to the right and bottom of each chip */
+  text-align: center; /* Center the text in each skill item */
+  text-transform: capitalize;
+  border-radius: 17px;
+  border: 1px solid #e4d2ed; /* Electric Violet border */
+  padding: 0px 25px; /* Increased padding */
+  font-size: 1.1rem; /* Slightly larger text */
+  /* Magnolia background for contrast */
+  background-color: transparent;
+    margin-bottom:30px;
+
+}
+.text-bold {
+  font-weight: 700; /* Makes the text bold */
+}
+/* Typewriter container */
+ .typewriter {
+  display: inline-block;          /* shrink to text width */
+  overflow: hidden;               /* hide the overflowing text */
+  border-right: .15em solid #9400FF; /* caret */
+  font-size: 1.5rem;                /* adjust as needed */
+  animation: 
+    typing 4s steps(50,end),      /* type on */
+    blink-caret .75s step-end infinite; /* cursor blink */
+}
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff; 
+  color: transparent;
+    font-style: normal;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
+
+
+/* Add spacing between chip content and the button inside */
+
+/* 1) Ensure the “container” does not fill the entire browser width (optional) *
 
 /* 2) Style the quote‐section background + spacing */
 .quote-section {
@@ -145,4 +295,30 @@ a:hover{
 .quote-section blockquote {
   padding-left: 0.75rem;
 }
+#work .row { 
+  padding-bottom: 25px; 
+  
+}
+.work-title {
+   padding-top:25px; 
+}
+/* About Me */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
 
+/* 2a) Photo column */
+.image-column {
+  flex: 1 1 250px;
+
+}
+.image-column img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

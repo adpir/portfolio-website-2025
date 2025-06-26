@@ -19,18 +19,19 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link
       rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+      href="https://unicons.iconscout.com/release-pro/v4.0.8/css/solid.css?key=8a31f260-6b6a-11ef-8ebd-0242ac140003"
     />
   </head>
-  <body>
+  <body id="home-page" class="portfolio">
     <header id="header">
-      <div class="header-container">
+      <div class="container">
         <img
+          class="logo"
           src="./img/logo/SVG/mind.svg"
           style="width: 100px; height: 100px"
-          alt="Mind Logo"
+          alt="Logo"
         />
-        <nav class="nav-column">
+        <nav class="navigation">
           <ul>
             <li>
               <a href="index.html">Work</a>
@@ -50,7 +51,7 @@
         <!-- project intro section-->
         <div class="project-intro-section">
           <div class="row">
-            <div class="about-column">
+            <div class="about-col">
               <!--column of project description: left side-->
               <p>
                 Design a location-based platform that connects actors with
@@ -61,20 +62,20 @@
             <!-- Right Side -->
             <div class="column-right">
               <div class="row">
-                <div class="project-column">
+                <div class="project-col">
                   <!--first column block of content -->
                   <div class="column-label">Project</div>
                   <div>Case Study</div>
                   <div>Responsive Design</div>
                 </div>
-                <div class="role-column">
+                <div class="role-col">
                   <!--second column block of content -->
                   <div class="column-label">Role</div>
                   <div>UX Research & Strategy</div>
                   <div>UI Design</div>
                   <div>Validation</div>
                 </div>
-                <div class="duration-column">
+                <div class="duration-col">
                   <!--thrid column block of content -->
                   <div class="column-label">Duration</div>
                   <div>6 Weeks</div>
@@ -124,7 +125,7 @@
               </picture>
             </div>
             <div class="project-overview">
-              <div class="project-challange-column">
+              <div class="project-challange-col">
                 <h2>The Challenge</h2>
                 <p>
                   SL8 was inspired by personal experience and validated through
@@ -137,7 +138,7 @@
                   and connecting with local talent.
                 </p>
               </div>
-              <div class="project-solution-column">
+              <div class="project-solution-col">
                 <h2>The Solution</h2>
                 <p>
                   The solution is to create an inclusive platform that connects
@@ -203,7 +204,7 @@
             </p>
             <div class="quantitative-row">
               <!-- Quantitative row -->
-              <div class="quantitative-column">
+              <div class="quantitative-left-col">
                 <!-- Quantitative left side column -->
                 <picture>
                   <source
@@ -212,33 +213,36 @@
                   />
                   <img
                     src="./img/sl8/2x/quantitiveanalysis@2x.png"
-                    alt="SL8 SL8IDesktop_mockups"
+                    alt="Quantitive Analysis"
                   />
                 </picture>
               </div>
               <!-- closing tag column -->
-              <div class="Insights-column">
+              <div class="insights-right-col">
                 <!-- Insights right side column -->
                 <h4>Key Comparative Insights:</h4>
-                <ul>
+                <ul class="insights-list">
                   <li>
-                    At <span>100%</span>, there's a direct connection between
-                    users' concerns about trust and their desire for advanced
-                    filtering to validate credibility.
+                    At <span class="text-bold">100%</span>, there's a direct
+                    connection between users' concerns about trust and their
+                    desire for advanced filtering to validate credibility.
                   </li>
                   <li>
-                    At <span>67%</span>, both pain points and features reveal a
-                    need for more transparent, detailed project descriptions.
+                    At <span class="text-bold">67%</span>, both pain points and
+                    features reveal a need for more transparent, detailed
+                    project descriptions.
                   </li>
                   <li>
-                    At <span>67%</span>, there's a clear alignment between
-                    challenges and features regarding location-based talent
-                    discovery, emphasizing its significance.
+                    At<span class="text-bold">67%</span>, there's a clear
+                    alignment between challenges and features regarding
+                    location-based talent discovery, emphasizing its
+                    significance.
                   </li>
                   <li>
-                    Lastly, at <span>33%</span>, users' desire for more
-                    personalized project matching corresponds with their need
-                    for greater flexibility in content sharing and uploads.
+                    Lastly, at <span class="text-bold">33%</span>, users' desire
+                    for more personalized project matching corresponds with
+                    their need for greater flexibility in content sharing and
+                    uploads.
                   </li>
                 </ul>
               </div>
@@ -270,7 +274,7 @@
               </li>
             </ul>
             <div class="image-row">
-              <div class="image-column">
+              <div class="image-col">
                 <picture>
                   <source
                     srcset="./img/sl8/1x/BeScene@1x.jpg"
@@ -282,7 +286,7 @@
                   />
                 </picture>
               </div>
-              <div class="image-column">
+              <div class="image-col">
                 <picture>
                   <source
                     srcset="./img/sl8/1x/projectcasting@1x.jpg"
@@ -298,7 +302,7 @@
           </div>
         </section>
         <section>
-          <div class="container">
+          <div class="user-personas container">
             <!-- user personas section -->
             <h2>User Personas</h2>
             <p>
@@ -470,7 +474,7 @@
               <h3>Create Account & Sign In</h3>
               <div class="right-login-screen-row">
                 <!-- row -->
-                <div class="right-login-screen-column">
+                <div class="right-login-screen-col">
                   <!-- column -->
                   <p>
                     SL8 offers a clean, bold entry point — where actors begin
@@ -478,7 +482,7 @@
                     next star.
                   </p>
                 </div>
-                <div class="right-login-screen-image-column">
+                <div class="right-login-screen-image-col">
                   <!-- column -->
                   <picture>
                     <source
@@ -528,28 +532,32 @@
                 <div class="filter-discover-column">
                   <!-- column -->
                   <p>
-                    With the <span>'Find Talent'</span> button, dive straight
-                    into the <span>Discover Page </span> or apply tailored
-                    filters directly from the Homepage. Easily select top-tier
-                    talent that perfectly aligns with your project needs,
-                    ensuring you connect with the best fit every time.
+                    With the <span class="text-bold">Find Talent'</span> button,
+                    dive straight into the
+                    <span class="text-bold">Discover Page </span> or apply
+                    tailored filters directly from the Homepage. Easily select
+                    top-tier talent that perfectly aligns with your project
+                    needs, ensuring you connect with the best fit every time.
                   </p>
                   <p>
-                    Customize your <span>filter</span> selections to
+                    Customize your
+                    <span class="text-bold">filter</span> selections to
                     effortlessly discover talents that perfectly match your
-                    needs. When you navigate to the <span>Discover Page </span>,
-                    you can seamlessly save your favorite profiles for later
-                    review.
+                    needs. When you navigate to the
+                    <span class="text-bold">Discover Page </span>, you can
+                    seamlessly save your favorite profiles for later review.
                   </p>
                   <p>
-                    Simply tap the <span> 'X'</span> to <span> cancel</span>,
-                    click <span>Star</span>to <span>add</span> talents to your
-                    <span>Favorites Collection</span>, and use the
-                    <span>thumbs-up icon </span>to <span> like</span> standout
-                    talents.
+                    Simply tap the<span class="text-bold"> 'X'</span> to
+                    <span class="text-bold"> cancel </span>,click
+                    <span class="text-bold">Star </span>to
+                    <span class="text-bold">add </span> talents to your
+                    <span class="text-bold">Favorites Collection </span>, and
+                    use the <span class="text-bold">thumbs-up icon </span>to
+                    <span class="text-bold">like</span> standout talents.
                   </p>
                 </div>
-                <div class="filter-discover-image-column">
+                <div class="filter-discover-image-col">
                   <!-- column -->
                   <picture>
                     <source
@@ -599,7 +607,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="responsive-mockups">
             <!-- container mockups -->
             <h2>Responsive Desktop Mockups</h2>
             <div class="desktop-mockups">
@@ -637,26 +645,29 @@
       </article>
     </main>
     <footer id="contact">
-      <div class="footer-container">
-        <h2>Let's Create Together</h2>
-        <p>
-          Do you like my work and want to discuss opportunities? Please get in
-          touch.
+      <div class="center container">
+        <h2 class="font-body">
+          Let's <span class="create-text"> Create</span> <br />
+          Together
+        </h2>
+        <p class="font-body">
+          If you like my work and want to discuss opportunities, get in touch.
+          <br />
+          I'm always open to new projects and collaborations.
         </p>
-        <div class="contact-buttons">
-          <a class="button contact" href="mailto:adpir.creativedesign@gmail.com"
-            >Email me</a
-          >
-        </div>
+        <a class="button contact" href="mailto:adpir.creativedesign@gmail.com"
+          >Email me</a
+        >
         <div class="social-links">
           <a href="https://www.linkedin.com/in/alicepiar" target="_blank">
-            <img src="./img/icons/linkedin.svg" alt="linkedIn" />
+            <img src="./img/icons/linkedin.svg" alt="Access LinkedIn Profile" />
+            <!-- <i class="fa-brands fa-linkedin"></i> -->
           </a>
-          <a href="Behance-Profile" target="_blank">
-            <img src="./img/icons/behance.svg" alt="BehanceProfile" />
+          <a href="https://www.behance.net/alicepiar1" target="_blank">
+            <img src="./img/icons/behance.svg" alt="Access Behance Portfolio" />
           </a>
         </div>
-        <p>Copyright @ Alice Piar 2025</p>
+        <p>&copy; Alice Piar 2025</p>
       </div>
     </footer>
   </body>

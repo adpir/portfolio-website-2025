@@ -25,13 +25,14 @@
   </head>
   <body id="home-page" class="portfolio">
     <header id="header">
-      <div class="header-container">
+      <div class="container">
         <img
+          class="logo"
           src="./img/logo/SVG/mind.svg"
           style="width: 100px; height: 100px"
-          alt="Mind Logo"
+          alt="Logo"
         />
-        <nav class="nav-column">
+        <nav class="navigation">
           <ul>
             <li>
               <a href="index.html">Work</a>
@@ -45,26 +46,36 @@
     <main>
       <section id="hero">
         <div class="container">
-          <h1 class="font-heading">
+          <!-- <h1 class="center font-heading">
             Hi, I'm <span class="hero-name">Alice Piar</span>!
+          </h1> -->
+          <h1 class="center font-heading">
+            Hi, I'm <span class="hero-name">Alice</span>
+            <span class="text-stroke"> Piar </span>!
           </h1>
-          <h2>
-            I'm a <em class="hero-title">UI/UX developer </em> from Minneapolis,
-            MN.
+          <h2 class="center font-body typewriter">
+            UI/UX Designer, Full-Stack Coder, Visual Artist, and Performer
           </h2>
-          <p>
-            I'm a <strong>creative problem-solver</strong> with a background in
-            full-stack development, UI/UX Design, and program management. I
-            bring a unique blend of technical skill, visual storytelling, and
-            user-focused strategy to every project I take on.
-          </p>
+
+          <!-- <h2 class="center font-body">
+            I'm a
+            <span class="hero-title">UI/UX </span>
+            <span class="developer">Developer</span>
+            from Minneapolis, MN.
+          </h2> -->
+          <!-- <p class="center font-body">
+            I'm a <span class="creative">creative problem-solver</span> with a
+            background in full-stack development, UI/UX Design, and program
+            management. I bring a unique blend of technical skill, visual
+            storytelling, and user-focused strategy to every project I take on.
+          </p> -->
         </div>
       </section>
       <section class="main-section">
         <div id="work">
-          <div class="project-container">
-            <h2>Featured Projects</h2>
-            <div>
+          <div class="container project-container">
+            <h2 class="work-title">Featured Projects</h2>
+            <div class="row">
               <div class="project-image-col">
                 <picture>
                   <source
@@ -78,13 +89,22 @@
                 </picture>
               </div>
               <div class="project-text-col">
-                <h3>SL8:<span> Uncovers Stars. Cast with Confidence.</span></h3>
+                <h3>
+                  SL8:<span class="subheading-title">
+                    Discover Stars. Cast with Confidence.</span
+                  >
+                </h3>
                 <p>
                   Born from my own experience as an actor, SL8 helps actors
                   showcase their talent and helps casting directors find the
                   right fit.
                 </p>
-                <p>UI/UX, Figma, Responsive Design</p>
+                <div class="skills">
+                  <span class="chip">UI/UX</span>
+                  <span class="chip">Figma</span>
+                  <span class="chip">Prototype</span>
+                  <span class="chip">Responsive Design</span>
+                </div>
                 <p>
                   <a href="portfolio-project-sl8.html" class="button"
                     >Read More</a
@@ -92,7 +112,7 @@
                 </p>
               </div>
             </div>
-            <div>
+            <div class="row">
               <div class="project-image-col">
                 <picture>
                   <source
@@ -112,7 +132,12 @@
                   savings goals with a visually appealing, mobilefriendly
                   approach. I created user flows, wireframes, and a calming UI.
                 </p>
-                <p>UI/UX, Figma, Prototype, Accessibility (WCAG)</p>
+                <div class="skills">
+                  <span class="chip">UI/UX</span>
+                  <span class="chip">Figma</span>
+                  <span class="chip">Prototype</span>
+                  <span class="chip">Responsive Design</span>
+                </div>
                 <p>
                   <a href="#" class="button">Read More</a>
                 </p>
@@ -123,9 +148,12 @@
       </section>
     </main>
     <footer id="contact">
-      <div class="project-text-col">
-        <h2>Let's Create Together</h2>
-        <p>
+      <div class="center container">
+        <h2 class="font-body">
+          Let's <span class="create-text"> Create</span> <br />
+          Together
+        </h2>
+        <p class="font-body">
           If you like my work and want to discuss opportunities, get in touch.
           <br />
           I'm always open to new projects and collaborations.
@@ -133,17 +161,17 @@
         <a class="button contact" href="mailto:adpir.creativedesign@gmail.com"
           >Email me</a
         >
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/alicepiar" target="_blank">
+            <img src="./img/icons/linkedin.svg" alt="Access LinkedIn Profile" />
+            <!-- <i class="fa-brands fa-linkedin"></i> -->
+          </a>
+          <a href="https://www.behance.net/alicepiar1" target="_blank">
+            <img src="./img/icons/behance.svg" alt="Access Behance Portfolio" />
+          </a>
+        </div>
+        <p>&copy; Alice Piar 2025</p>
       </div>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/alicepiar" target="_blank">
-          <img src="./img/icons/linkedin.svg" alt="Access LinkedIn Profile" />
-          <!-- <i class="fa-brands fa-linkedin"></i> -->
-        </a>
-        <a href="https://www.behance.net/alicepiar1" target="_blank">
-          <img src="./img/icons/behance.svg" alt="Access Behance Portfolio" />
-        </a>
-      </div>
-      <p>&copy; Alice Piar 2025</p>
     </footer>
   </body>
 </html>
