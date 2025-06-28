@@ -1,21 +1,22 @@
 /*
   Color Palette:
-    Licorice: 0B0011
+    Rich Black: #030019
     Electric Violet: #9400FF
     Thistle: #ECD1FF
     Magnolia: #FBF5FF
-*/
+    accent: #40D3ED #FF66C4
+    */
 * {
   box-sizing: border-box;
 }
 ::-moz-selection { /* Code for Firefox */
 color: #9400FF;
-background: #FBF5FF;
+background: #ECD1FF;
 }
 
 ::selection {
 color: #9400FF;
-background: #FBF5FF;
+background: #ECD1FF;
 }
 
 .container {
@@ -23,26 +24,39 @@ background: #FBF5FF;
     padding: 0 15px;
 
   }
- 
+
   .project-container {
      padding: 0 30px;
 
   }
  .font-heading {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 5em;
+ font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 8em;
   line-height: 1.1;
-  color: #FBF5FF; 
+  color: #030019; 
   display: block;
   text-align: start;
   position:relative
 } 
-
-
-.font-body{
-  color:#fbf5ff
+p.font-body{
+  color: #030019b2;
+  font-size:22px;
 }
+.about-text{
+  color: #030019c0;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+}
+.footer-text{
+  color:#FBF5FF
+}
+
 /* .developer{
   color: #9400FF; 
   font-size: 2.5rem;
@@ -51,12 +65,12 @@ background: #FBF5FF;
 } */
 
 /* .creative {
-  color: #9400FF; 
+  color: #40d3edc7; 
   font-weight: 700;
   font-size: 1.2rem;
   display: inline-block;
   margin-top: 10px;
-} */
+}  */
 body {
   background-color: #FBF5FF; /* Magnolia */
   font-family: "Space Grotesk", sans-serif;
@@ -71,7 +85,7 @@ body {
 }
 
 header {
-  background-color: #0a030e;
+  background-color: #FBF5FF;
   padding: 10px;
     text-align: center;
     box-shadow: #ffffff;
@@ -82,10 +96,13 @@ header {
   padding-top: 133px;
 } */
 #hero {
-  background-color: #0a030e;
-  padding: 20px 0;
-  display: inline-block;
+  background-color: #ecd1ff9b;
+/* padding-top: 180px;
+padding-bottom: 120px;; */
   width: 100%;
+  position:relative;
+    display: inline-block;
+  justify-content: left;
 }
 
 h1,
@@ -95,7 +112,7 @@ h4,
 h5,
 h6 {
   font-family: 'Lora', serif;
-  color: #0a030e;
+  color: #0B0011;
   line-height: 1.4;
 }
 
@@ -121,7 +138,7 @@ li {
   font-weight: 400;       /* Regular */
   font-size: 1rem;        /* 16px */
   line-height: 1.6;       /* ~26px */
-  color: #09000f;         /* Licorice or your chosen dark text color */
+  color: #0B0011;         /* Licorice or your chosen dark text color */
   margin: 0 0 1rem;       /* spacing between paragraphs */
 }
 
@@ -196,18 +213,18 @@ footer#contact .social-links {
   margin: 1rem 0;
   
 }
-footer {
-  background-color: #0a030e; /* Licorice */
-  padding-top: 40px; /* Adds padding to the top of the footer */
-}
-
 
 .create-text{
   color:#9400ff;
   text-transform: uppercase;
  font-style: italic;
 }
-  nav > ul {
+footer {
+  background-color: #0a030e; /* Licorice */
+  padding-top: 40px; /* Adds padding to the top of the footer */
+}
+
+  nav > ul  {
   list-style-type: none;
   padding: 0;
 }
@@ -220,7 +237,7 @@ nav > ul > li > a {
   padding: 0 15px;
   text-decoration: none;
   font-weight: 700;
-  color: #fbf5ff; }
+  color: #0B0011; }
 
 .row {
   margin: 25px 0; 
@@ -253,19 +270,31 @@ nav > ul > li > a {
     typing 4s steps(50,end),      /* type on */
     blink-caret .75s step-end infinite; /* cursor blink */
 }
-.text-stroke {
+/* .text-stroke {
   color: transparent;
-  -webkit-text-stroke: 1px #ffffff; 
+  -webkit-text-stroke: 1px #0B0011; 
   color: transparent;
     font-style: normal;
     font-weight: 700;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-color: #0B0011;
+} */
+.text-h1{
+  color: #9400FF; /* Licorice */
+  font-weight: 700; /* Makes the text bold */
+  font-style: normal;
+
+}
+.skills-list{
+  list-style-type: none;
+
 }
 
-
-
+.project-image{
+    border-left: 4px solid #9400ff; 
+     border-right: 4px solid #FF66C4; 
+}
 /* Add spacing between chip content and the button inside */
 
 /* 1) Ensure the “container” does not fill the entire browser width (optional) *
@@ -295,6 +324,7 @@ nav > ul > li > a {
 .quote-section blockquote {
   padding-left: 0.75rem;
 }
+
 #work .row { 
   padding-bottom: 25px; 
   
@@ -303,7 +333,7 @@ nav > ul > li > a {
    padding-top:25px; 
 }
 /* About Me */
-.about-content {
+.container .about-content {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -314,11 +344,12 @@ nav > ul > li > a {
 /* 2a) Photo column */
 .image-column {
   flex: 1 1 250px;
-
+text-align: center;
+  /* Ensures the image column takes up at least 250px width */
+  margin-bottom: 2rem; /* Adds spacing below the image column */
 }
 .image-column img {
   width: 100%;
   max-width: 300px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
