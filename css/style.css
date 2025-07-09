@@ -6,9 +6,14 @@
     Magnolia: #FBF5FF
     accent: #40D3ED #FF66C4
     */
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
+
+html {
+  overflow-x: hidden;
+}
+
 ::-moz-selection { /* Code for Firefox */
 color: #9400FF;
 background: #ECD1FF;
@@ -19,30 +24,35 @@ color: #9400FF;
 background: #ECD1FF;
 }
 
+/* .container {
+    max-width: 1200px;
+    margin:auto;
+   padding: 0 15px; 
+  } */
+/* .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+} */
+
 .container {
     max-width: 1200px;
+    margin:auto;
     padding: 0 15px;
-
+    width: 100%;
+    box-sizing: border-box;
   }
-
-  .project-container {
+ .project-container {
      padding: 0 30px;
 
-  }
- .font-heading {
- font-family: 'Lora', serif;
-  font-weight: 400;
-  font-size: 8em;
-  line-height: 1.1;
-  color: #030019; 
-  display: block;
-  text-align: start;
-  position:relative
-} 
+  } 
+
 p.font-body{
   color: #030019b2;
-  font-size:22px;
+  font-size:18px;
 }
+
 .about-text{
   color: #030019c0;
   font-size: 1rem;
@@ -72,37 +82,132 @@ p.font-body{
   margin-top: 10px;
 }  */
 body {
+  margin:0;
+  min-height: 100%;
   background-color: #FBF5FF; /* Magnolia */
   font-family: "Space Grotesk", sans-serif;
   font-size: 16px; /* Sets the font size to 16px */
-  font-weight: 400; /* Sets the font weight to 300 */
+  font-weight: 400; /* Sets the font weight to 400 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #100217;
 }
 
 .center {
-  text-align: center; /* Centers text */
+  text-align: center; /* Centers text for every section that has it*/
 }
 
-header {
-  background-color: #FBF5FF;
+header{
+  background-color: #f9f0f9;
   padding: 10px;
-    text-align: center;
-    /* box-shadow: #ffffff; */
-    position: relative;
+  text-align: center; 
+  position: relative;
 }
+
+/* Navigation - mobile first */
+nav {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+  nav > ul  {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+  width: 100px;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #0B0011; }
 
   /* main {
   padding-top: 133px;
 } */
 #hero {
-  background-color: #ecd1ff9b;
-/* padding-top: 180px;
-padding-bottom: 120px;; */
+background-color: #f8e2f8;
+padding-top:50px;
+ padding-bottom:6rem;
+/* the paddign -top was set to 99px but it create a bid space */
+width: 100%;
+position:relative
+/* position:relative;
+display: block;  */
+  /* text-align: center; */
+}
+.logo #header{
+  max-width: 250px;
+  text-align: center; 
+  }
+
+#header{
+background-color: #f8e2f8;
+padding: 20px;
+
+}
+
+ h1.font-heading {
+ font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: #030019; 
+display: block;
+  text-align: start;
+  position:relative 
+} 
+
+.font-thintext {
+  font-weight: 300; /* Lighter weight for the thin text */
+  font-size: 1.2em; /* Slightly smaller than the main heading */
+  color: #9400FF; /* Electric Violet */
+}
+.font-bodytext {
+  font-style: italic; /* Italic style for the text */
+  font-size: 1.2em; /* Slightly smaller than the main heading */
+    background: linear-gradient(90deg, #9400FF, rgba(46, 80, 229, 0.861)); /* Example gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.italic{
+font-style: italic;
+  font-size: 1.2em; /* Slightly smaller than the main heading */
+  background: linear-gradient(90deg, #9400FF, rgba(46, 80, 229, 0.861)); /* Example gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marquee-container {
+  padding:5px;
+ background: linear-gradient(90deg, #9400FF, rgba(46, 80, 229, 0.861)); /* Example gradient */
+  overflow: hidden;
+  white-space: nowrap;
   width: 100%;
-  position:relative;
-    display: inline-block;
-  justify-content: left;
+  position: relative;
+/* margin-top: 0.1rem; */
+/* overflow: hidden; */
+}
+
+.marquee {
+            display: inline-block;
+            min-width: 200%;
+              white-space: nowrap;
+            font-size: 1.5rem; /* Smaller for mobile */
+              font-weight: bold;
+              animation: marquee 15s linear infinite;
+            
+          }
+.text-h1{
+  color: #9400FF; /* Licorice */
+  font-weight: 700; /* Makes the text bold */
+  font-style: normal;
 }
 
 h1,
@@ -131,9 +236,9 @@ h3 {
   font-weight: 400;
 }
 
-body,
 p,
-li {
+li
+{
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;       /* Regular */
   font-size: 1rem;        /* 16px */
@@ -141,6 +246,7 @@ li {
   color: #0B0011;         /* Licorice or your chosen dark text color */
   margin: 0 0 1rem;       /* spacing between paragraphs */
 }
+
 
 img {
   width: 100%;
@@ -152,6 +258,7 @@ a {
 text-decoration: underline;
 color: #fbf5ff;
 }
+
 a:hover{
   color: #9400ff; /* Electric Violet */
   text-decoration: none; /* Removes underline on hover */
@@ -183,26 +290,24 @@ a:hover{
 .button:active {
   background-color: #ecd1ff; /* Darker violet */
 }
+
 /* Remove underline from button or link */
 button, .button, a.button {
   text-decoration: none;
 }
+
 .button.contact {
-  background-color: transparent;
-  color: #9400ff;
+    background-color: #9400ff;
+  /* background-color: transparent; */
+  color: #fbf5ff;
   text-transform: uppercase;
   border: 2px solid #9400ff;
 }
 
 .button.contact:hover {
-  background-color: #9400ff;
+    background-color: #9500ff;
   color: #fbf5ff;
 }
-
-.logo #header{
-  max-width: 250px;
-  text-align: center;
-  }
 
 footer#contact h2 { margin-bottom: 1rem; }
 footer#contact p { margin-bottom: 1rem; }
@@ -224,30 +329,30 @@ footer {
   padding-top: 40px; /* Adds padding to the top of the footer */
 }
 
-  nav > ul  {
-  list-style-type: none;
-  padding: 0;
+.copyright {
+  border-top: 1px solid #ecd1ff; /* Thistle */
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  font-size: 0.875rem; /* 14px */
+  color: #fbf5ff; /* Light text color for contrast */ 
 }
 
-nav > ul > li {
-  display: inline-block;
+.copyright p {
+  margin: 0;
+  color: #fbf5ff;
 }
-
-nav > ul > li > a {
-  padding: 0 15px;
-  text-decoration: none;
-  font-weight: 700;
-  color: #0B0011; }
 
 .row {
   margin: 25px 0; 
   /* 25px top and bottom, 0 left and right */
+  width: 100%;
+  max-width: 100%;
 }
 
-.skills-list
-  {
-    font-style: bold;
-  }
+
 .chip  {
   display: inline-block;
   margin: 0 10px 10px 0; /* Adds space to the right and bottom of each chip */
@@ -265,6 +370,7 @@ nav > ul > li > a {
 .text-bold {
   font-weight: 700; /* Makes the text bold */
 }
+
 /* Typewriter container */
  .typewriter {
   display: inline-block;          /* shrink to text width */
@@ -275,31 +381,130 @@ nav > ul > li > a {
     typing 4s steps(50,end),      /* type on */
     blink-caret .75s step-end infinite; /* cursor blink */
 }
-/* .text-stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px #0B0011; 
-  color: transparent;
-    font-style: normal;
-    font-weight: 700;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #0B0011;
-} */
-.text-h1{
-  color: #9400FF; /* Licorice */
-  font-weight: 700; /* Makes the text bold */
-  font-style: normal;
 
-}
-.skills-list{
+
+.skills-list, .tools-list {
   list-style-type: none;
-
+  padding: 0;
+  margin: 0;
 }
 
+/* About Me */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+/* 2a) Photo column */
+/* .about-content{
+  flex: 1 1 250px;
+text-align: center;
+  margin-bottom: 2rem; 
+}  */
+
+.about-img img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.card {
+  background-color: #f8e2f8;
+  border: 1px solid #f8e2f8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* Make cards fill the available height */
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #9400FF;
+}
+
+/* Content area that grows to fill available space */
+.card .feature-desc {
+  flex-grow: 0;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  flex-grow: 1;  /* This will push the content to fill remaining space */
+  margin-bottom: 0;
+}
+
+/* 1) Turn your .row into a grid container */
+.skills-section .row {
+  display: grid;
+  grid-template-columns: 1fr;    /* single column by default */
+  gap: 2rem;                   /* easy gutters */
+  align-items: stretch;        /* Make grid items stretch to same height */
+}
+
+.skills-section .col-md-6 {
+  float: none !important;
+  width: auto !important;
+  display: flex;               /* Make the column a flex container */
+  flex-direction: column;      /* Stack content vertically */
+}
+
+/* === Carousel Container === */
+.snap-carousel {
+  /* overflow-x: auto; */
+  /* scroll-snap-type: x mandatory; */
+  /* -webkit-overflow-scrolling: touch; */
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+}
+
+/* track of slides */
+.snap-track {
+  display: flex;
+  gap: 1rem;
+}
+
+/* each card */
+.snap-slide {
+  flex: 0 0 220px;            /* card width */
+  scroll-snap-align: center;  /* snap to center */
+  border-radius: 16px;
+  overflow: hidden;
+  transform: rotate(-2deg);   /* slight angle */
+  transition: transform 0.3s;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  background: #FBF5FF;
+}
+
+/* alternate rotation on even slides */
+.snap-slide:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+/* hover to straighten and scale */
+.snap-slide:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* ensure images fill the card */
+.snap-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* ==============================
+
+/* Project Section */
 .project-image{
-    border-left: 4px solid #9400ff; 
-     border-right: 4px solid #FF66C4; 
-}
+  border:4px solid
+  transparent; /* Transparent border for spacing */
+  border-radius: 20px; /* Rounded corners for the image */
+} 
 /* Add spacing between chip content and the button inside */
 
 /* 1) Ensure the “container” does not fill the entire browser width (optional) *
@@ -337,24 +542,114 @@ nav > ul > li > a {
 .work-title {
    padding-top:25px; 
 }
-/* About Me */
-.container .about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: flex-start;
+/* ==============================
+Mobile-first base styles
+================================= */
+/* Grid system - mobile first */
+[class*="col-"] {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
-/* 2a) Photo column */
-.image-column {
-  flex: 1 1 250px;
-text-align: center;
-  /* Ensures the image column takes up at least 250px width */
-  margin-bottom: 2rem; /* Adds spacing below the image column */
-}
-.image-column img {
+.row {
   width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
+  max-width: 100%;
+  overflow: hidden;
 }
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  /* Responsive typography for tablets+ */
+  h1.font-heading {
+    font-size: 2.5rem;
+  }
+p.font-body {
+  font-size: 1rem;  /* Reduced from 1.125rem */
+  }
+  .marquee {
+  font-size: 1.75rem;  /* Reduced from 2rem */
+  }
+
+  /* Enable floating for larger screens */
+  [class*="col-"] {
+  float: left;
+  }
+  .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+  /* Grid columns for medium screens */
+  .col-md-1 { width: 8.333333%; }
+  .col-md-2 { width: 16.666667%; }
+  .col-md-3 { width: 25.000000%; }
+  .col-md-4 { width: 33.333333%; }
+  .col-md-5 { width: 41.666667%; }
+  .col-md-6 { width: 50.000000%; }
+  .col-md-7 { width: 58.333333%; }
+  .col-md-8 { width: 66.666667%; }
+  .col-md-9 { width: 75.000000%; }
+  .col-md-10 { width: 83.333333%; }
+  .col-md-11 { width: 91.666667%; }
+  .col-md-12 { width: 100.000000%; }
+
+.skills-section .row {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;  /* Maintain equal height in two-column layout */
+  }
+
+} 
+/* position the text side-by size */
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  /* Larger typography for desktop */
+  h1.font-heading {
+    font-size: 4em;
+  }
+
+  .marquee {
+    font-size: 2.5rem;
+  }
+
+  /* Large device grid */
+  .col-lg-1 { width: 8.333333%; }
+  .col-lg-2 { width: 16.666667%; }
+  .col-lg-3 { width: 25.000000%; }
+  .col-lg-4 { width: 33.333333%; }
+  .col-lg-5 { width: 41.666667%; }
+  .col-lg-6 { width: 50.000000%; }
+  .col-lg-7 { width: 58.333333%; }
+  .col-lg-8 { width: 66.666667%; }
+  .col-lg-9 { width: 75.000000%; }
+  .col-lg-10 { width: 83.333333%; }
+  .col-lg-11 { width: 91.666667%; }
+  .col-lg-12 { width: 100.000000%; }
+}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+/* @media only screen and (min-width: 1920px) {
+} */

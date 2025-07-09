@@ -23,7 +23,7 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
   </head>
-  <body id="home-page" class="portfolio">
+  <body id="about-page" class="portfolio">
     <header id="header">
       <div class="container">
         <img
@@ -44,32 +44,60 @@
       </div>
     </header>
     <main>
-      <!-- <section> -->
-      <!-- remove the h1 about me -->
-      <!-- <div class="about"> -->
-      <!-- <h1>About Me</h1> -->
-      <!-- </div>
-      </section> -->
-      <section class="about-content container">
-        <div class="image-column">
-          <picture>
-            <source
-              srcset="./img/about-me/about-me1x.png"
-              media="(max-width:767px)"
-            />
-            <img src="./img/about-me/about-me2x.png" alt="Profile picture" />
-          </picture>
-          <div class="about-row row">
-            <div class="about-col">
-              <!-- <h2>My Story</h2> -->
-              <br />
+      <section id="hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="font-heading">
+                Hola, I'm
+                <span class="text-h1"
+                  >Alice<span class="text-h1"> Piar</span></span
+                >.
+              </h1>
+              <h2 class="font-body typewriter">
+                A UI/UX Designer, Full-Stack Coder, Visual Artist, and Performer
+              </h2>
+              <p class="font-body">
+                I'm a <span class="creative">creative problem-solver</span> with
+                a background in full-stack development, UI/UX Design, and
+                program management. I bring a unique blend of technical skill,
+                visual storytelling, and user-focused strategy to every project
+                I take on.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <picture>
+                <source
+                  srcset="./img/about-me/About@1x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="about-image"
+                  src="./img/about-me/About@2x.png"
+                  alt="Profile picture"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="right aboutsection">
+        <div class="container about-content">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Who I Am? -->
+              <h3 class="learn-more">Who I am?</h3>
               <p class="about-text">
                 I'm a
                 <span class="true-creative">true creative at heart </span>,
-                passionately blending art and functionality both on and off the
-                screen. With a Bachelor's degree in Theater, my roots are in
-                storytelling, emotional connection, and visual expression—all of
-                which deeply inform my work today as a designer and developer.
+                passionately blending <b>art</b> and functionality both on and
+                off the screen. With a <b>Bachelor's degree in Theater</b>, my
+                roots are in
+                <em
+                  >storytelling, emotional connection, and visual
+                  expression—</em
+                >all of which deeply inform my work today as a
+                <b>designer</b> and <b>developer</b>.
               </p>
               <p class="about-text">
                 In 2021, I earned a certification in Full-Stack Software
@@ -80,72 +108,159 @@
                 holistically, balancing structure with emotion and function with
                 beauty.
               </p>
-              <p class="about-text">
-                What makes me unique is how my background combines technical
-                problem solving, user empathy, and artistic vision. I've led
-                teams, managed content, delivered high-quality support, and
-                optimized processes across digital platforms—all while keeping
-                the user at the center. Whether sketching wireframes, writing
-                clean front-end code, or designing a user flow, I bring an
-                intuitive understanding of storytelling and experience design.
-                I'm currently seeking opportunities as a UX/UI Designer or
-                Front-End UI Engineer, where I can merge my creative instincts
-                with my technical skills to build humancentered, visually
-                compelling digital products.
-              </p>
-              <p class="about-text">
-                Outside of tech, I'm still a performer and maker—an actor who
-                loves creative makeup, prop design, and hands-on crafting. My
-                cultural roots in Puerto Rico and passion for expression
-                continue to shape my perspective as a thoughtful, empathetic
-                designer.
-              </p>
-              <a class="button" href="./files/alicepiar-resume.pdf">
-                Download Resume</a
-              >
+              <!-- ↓ carousel starts here ↓ -->
+              <div class="snap-carousel">
+                <div class="snap-track">
+                  <div class="snap-slide">
+                    <img
+                      src="./img/sl8/1x/AlicePiarPhoto@1x.jpg"
+                      alt="Slide 1"
+                    />
+                  </div>
+                  <div class="snap-slide">
+                    <img
+                      src="./img/sl8/1x/AlicePiarPhoto@1x.jpg"
+                      alt="Slide 2"
+                    />
+                  </div>
+                  <div class="snap-slide">
+                    <img
+                      src="./img/sl8/1x/AlicePiarPhoto@1x.jpg"
+                      alt="Slide 3"
+                    />
+                  </div>
+                  <div class="snap-slide">
+                    <img
+                      src="./img/sl8/1x/AlicePiarPhoto@1x.jpg"
+                      alt="Slide 4"
+                    />
+                  </div>
+                  <div class="snap-slide">
+                    <img
+                      src="./img/sl8/1x/AlicePiarPhoto@1x.jpg"
+                      alt="Slide 5"
+                    />
+                  </div>
+                  <div class="snap-slide">
+                    <img
+                      src="./img/sl8/1x/AlicePiarPhoto@1x.jpg"
+                      alt="Slide 6"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- ↑ carousel ends here ↑ -->
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- <p class="about-text">
+                    I'm a
+                    <span class="true-creative">true creative at heart </span>,
+                    passionately blending art and functionality both on and off
+                    the screen. With a Bachelor's degree in Theater, my roots
+                    are in storytelling, emotional connection, and visual
+                    expression—all of which deeply inform my work today as a
+                    designer and developer.
+                  </p> -->
+                  <!-- <p class="about-text">
+                    In 2021, I earned a certification in Full-Stack Software
+                    Engineering, and in 2025, I completed a UI/UX Design course
+                    specializing in front-end development. While coding gave me
+                    the tools to build, the design gave me the voice to shape
+                    meaningful experiences. This combination allows me to
+                    approach projects holistically, balancing structure with
+                    emotion and function with beauty.
+                  </p> -->
+                  <p class="about-text">
+                    What makes me <b>unique</b> is how my background combines
+                    technical problem solving, user empathy, and artistic
+                    vision. I've led teams, managed content, delivered
+                    high-quality support, and optimized processes across digital
+                    platforms—all while keeping the user at the center. Whether
+                    sketching wireframes, writing clean front-end code, or
+                    designing a user flow, I bring an intuitive understanding of
+                    storytelling and experience design. I'm currently seeking
+                    opportunities as a UX/UI Designer or Front-End UI Engineer,
+                    where I can merge my creative instincts with my technical
+                    skills to build humancentered, visually compelling digital
+                    products.
+                  </p>
+                  <p class="about-text">
+                    Outside of tech, I'm still a performer and maker—an actor
+                    who loves creative makeup, prop design, and hands-on
+                    crafting. As a
+                    <strong>makeup artist</strong>, I consider myself a
+                    <em>visual & digital artist</em>, translating ideas into
+                    color, light, and texture. My cultural roots in Puerto Rico
+                    and passion for expression continue to shape my perspective
+                    as a thoughtful, empathetic designer.
+                  </p>
+                  <a class="button" href="./files/alicepiar-resume.pdf">
+                    Download Resume</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="skills container">
-              <h2>My Skills & Tools</h2>
-              <div class="skills-row row">
-                <div class="skills-col">
-                  <h3>Relevant Skills</h3>
-                  <ul class="skills-list">
-                    <li>UI/UX Design</li>
-                    <li>Front-End Development</li>
-                    <li>Content Strategy & Campaigns</li>
-                    <li>QA & Reporting</li>
-                    <li>Project & Program Management</li>
-                    <li>Comunication & Collaboration</li>
-                    <li>Problem-Solver & Detail Oriented</li>
-                  </ul>
-                </div>
-                <div class="tools-col">
-                  <h3>Tools I use</h3>
-                  <ul class="skills-list">
-                    <li class="tools-list-item">
-                      Design & Prototyping: <br />
-                      Miro, Canva, Figma
-                    </li>
-                    <li>
-                      Development <br />
-                      VS Code, HTML5, CSS3, JavaScript (ES6), Git/ GitHub,
-                      React, Bootstrap, Tailwind
-                    </li>
-                    <li>
-                      Content & Campaigns <br />
-                      Sitecore CMS, Monday.com, email marketing tools,
-                      Salesforce
-                    </li>
-                    <li>
-                      QA & Reportingy<br />
-                      Tableau, QA testing tools, browser testing environments
-                    </li>
-                    <li>
-                      Productivity<br />
-                      Zendesk, Google Workspace, Microsoft Office, Slack, Zoom
-                    </li>
-                  </ul>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card skills-card">
+                <h3 class="card-title">Skills</h3>
+                <p class="feature-desc">
+                  I bring a blend of creative design, front-end development, and
+                  project leadership to every project.
+                </p>
+                <ul class="skills-list">
+                  <li>UI/UX Design</li>
+                  <li>Front-End Development</li>
+                  <li>Content Strategy &amp; Campaigns</li>
+                  <li>QA &amp; Reporting</li>
+                  <li>Project &amp; Program Management</li>
+                  <li>Communication &amp; Collaboration</li>
+                  <li>Problem-Solver &amp; Detail Oriented</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card tools-card">
+                <h3 class="card-title">Tools</h3>
+                <p class="feature-desc">
+                  From wireframes to code, these are the platforms and libraries
+                  I rely on every day.
+                </p>
+                <ul class="tools-list">
+                  <li>
+                    <strong>Design &amp; Prototyping:</strong>
+                    <span>Miro, Canva, Figma</span>
+                  </li>
+                  <li>
+                    <strong>Development:</strong>
+                    <span
+                      >VS Code, HTML5, CSS3, JavaScript (ES6), Git/GitHub,
+                      React, Bootstrap, Tailwind</span
+                    >
+                  </li>
+                  <li>
+                    <strong>Content &amp; Campaigns:</strong>
+                    <span
+                      >Sitecore CMS, Monday.com, Email Tools, Salesforce</span
+                    >
+                  </li>
+                  <li>
+                    <strong>QA &amp; Reporting:</strong>
+                    <span>Tableau, QA Testing Tools, Browser Testing</span>
+                  </li>
+                  <li>
+                    <strong>Productivity:</strong>
+                    <span
+                      >Zendesk, Google Workspace, Microsoft Office, Slack,
+                      Zoom</span
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
