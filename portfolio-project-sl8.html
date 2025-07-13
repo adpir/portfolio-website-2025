@@ -24,7 +24,7 @@
   </head>
   <body id="home-page" class="portfolio">
     <header id="header">
-      <div class="container">
+      <div class="container header-container">
         <img
           class="logo"
           src="./img/logo/SVG/mind.svg"
@@ -46,47 +46,48 @@
       <article class="main-section container">
         <!-- change to article for the whole section  -->
         <div class="hero-title">
-          <h1>SL8:<span> Discover Stars. Cast with Confidence.</span></h1>
+          <h1 class="center pb-110">
+            SL8: Discover <span class="create-text"> Stars</span>. Cast with
+            Confidence.
+          </h1>
         </div>
         <!-- project intro section-->
         <div class="project-intro-section">
-          <div class="row">
-            <div class="about-col">
-              <!--column of project description: left side-->
+          <div class="about-row">
+            <!-- <div class="about-col">
               <p>
                 Design a location-based platform that connects actors with
                 casting directors, simplifying the discovery and networking
                 process for local productions.
               </p>
-            </div>
-            <!-- Right Side -->
-            <div class="column-right">
-              <div class="row">
+            </div> -->
+            <!--first column block of content -->
+            <!-- <div class="column-right">
+              <div class="project-details">
                 <div class="project-col">
-                  <!--first column block of content -->
+                
                   <div class="column-label">Project</div>
                   <div>Case Study</div>
                   <div>Responsive Design</div>
-                </div>
-                <div class="role-col">
-                  <!--second column block of content -->
-                  <div class="column-label">Role</div>
+                </div> -->
+            <!-- <div class="role-col">   second column block of content -->
+
+            <!-- <div class="column-label">Role</div>
                   <div>UX Research & Strategy</div>
                   <div>UI Design</div>
                   <div>Validation</div>
                 </div>
                 <div class="duration-col">
-                  <!--thrid column block of content -->
                   <div class="column-label">Duration</div>
                   <div>6 Weeks</div>
                   <div>2024</div>
                 </div>
-              </div>
-            </div>
+              </div> -->
+            <!-- </div> thrid column block of content -->
           </div>
         </div>
         <section class="hero-image-section">
-          <div class="container">
+          <div class="container hero-image-container">
             <picture>
               <source
                 srcset="./img/sl8/1x/SL8@1x.jpg"
@@ -100,7 +101,7 @@
           </div>
         </section>
         <section class="quote-section">
-          <div class="container">
+          <div class="container quote-container">
             <blockquote>
               <p>
                 Looking for your next star? Discover talented actors nearby and
@@ -154,7 +155,7 @@
         </section>
         <section>
           <!-- user research section -->
-          <div class="container">
+          <div class="container user-research-container">
             <h2>User Research</h2>
             <p>
               Interviews were conducted with actors from diverse ethnic
@@ -192,7 +193,7 @@
           </div>
         </section>
         <section>
-          <div class="container">
+          <div class="container quantitative-analysis">
             <!-- Quantitative section -->
             <h2>Quantitative Analysis</h2>
             <p>
@@ -251,7 +252,7 @@
         </section>
         <section>
           <!-- competitive analysis section -->
-          <div class="container">
+          <div class="container competitive-analysis">
             <h2>Competitive Analysis</h2>
             <p>
               To better understand the gaps in the current casting experience, I
@@ -273,26 +274,28 @@
                 Fonts and text are difficult to read, affecting accessibility
               </li>
             </ul>
-            <div class="image-row">
-              <div class="image-col">
+            <div class="row image-row">
+              <div class="image col-md-6">
                 <picture>
                   <source
                     srcset="./img/sl8/1x/BeScene@1x.jpg"
                     media="(max-width:767px)"
                   />
                   <img
+                    class="responsive-img-bescene"
                     src="./img/sl8/2x/BeScene@2x.jpg"
                     alt="casting site BeScene"
                   />
                 </picture>
               </div>
-              <div class="image-col">
+              <div class="image col-md-6">
                 <picture>
                   <source
                     srcset="./img/sl8/1x/projectcasting@1x.jpg"
                     media="(max-width:767px)"
                   />
                   <img
+                    class="responsive-img-projectcasting"
                     src="./img/sl8/2x/projectcasting@2x.jpg"
                     alt="casting site project casting"
                   />
@@ -329,7 +332,7 @@
         </section>
         <section>
           <!-- user flow section -->
-          <div class="container">
+          <div class="container user-flow-container">
             <h2>User Flow & Journey Mapping</h2>
             <p>
               I created user flows and journey maps for both actors and casting
@@ -344,7 +347,7 @@
                   srcset="./img/sl8/1x/sl8userflow@1x.png"
                   media="(max-width:767px)"
                 />
-                <img
+                <img class="responsive-img-userflow"
                   src="./img/sl8/2x/sl8userflow@2x.png"
                   alt="SL8 user flows"
                 />
@@ -354,7 +357,7 @@
         </section>
         <section>
           <!-- wireframes section -->
-          <div class="container">
+          <div class="container wireframes-container">
             <div class="lo-fidelity-wireframes">
               <h2>Lo-fidelity Wireframes</h2>
               <p>
@@ -398,7 +401,7 @@
         </section>
         <section>
           <!-- testing-iteration-section -->
-          <div class="container">
+          <div class="container testing-iteration">
             <h2>Testing & Iteration</h2>
             <p>
               User feedback helped refine the swipe interface, profile cards,
@@ -441,7 +444,7 @@
           </div>
         </section>
         <section>
-          <div class="container">
+          <div class="container ui-design">
             <h2>UI Design</h2>
             <div class="branding">
               <h3>Branding &amp; Visual Design</h3>
@@ -667,7 +670,11 @@
             <img src="./img/icons/behance.svg" alt="Access Behance Portfolio" />
           </a>
         </div>
-        <p>&copy; Alice Piar 2025</p>
+        <div class="copyright">
+          <div class="copyright-text">
+            <p>Alice Piar © 2025</p>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

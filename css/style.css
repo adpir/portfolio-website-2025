@@ -6,14 +6,34 @@
     Magnolia: #FBF5FF
     accent: #40D3ED #FF66C4
     */
+
+    :root {
+  --rich-black: #05011f;
+  --dark-purple: #150122;
+  --electric-violet: #9400FF;
+  --thistle: #ECD1FF;
+  --magnolia: #FBF5FF;
+  --accent-blue: #40D3ED;
+  --accent-pink: #FF66C4;
+  --dark-header: #100824;
+  --text-dark: #0d0116;
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-html {
+/* html {
   overflow-x: hidden;
+  height: 100%;
+} */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: var(--magnolia);
+  color: var(--rich-black);
 }
-
 ::-moz-selection { /* Code for Firefox */
 color: #9400FF;
 background: #ECD1FF;
@@ -23,7 +43,57 @@ background: #ECD1FF;
 color: #9400FF;
 background: #ECD1FF;
 }
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
+.row {
+  width: 100%;
+  margin: 0 0 2.5rem 0;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-md-6 {
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* Project image styling */
+.project-image {
+  border: 4px solid transparent; 
+  border-radius: 20px; 
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: auto;
+  display: block;
+} 
+.responsive-img-bescene,
+.responsive-img-projectcasting {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 6px 40px rgba(237, 237, 237, 0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem; /* Add vertical spacing between stacked images */
+}
+.responsive-img-userflow {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 6px 40px rgba(255, 255, 255, 0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem; /* Add vertical spacing between stacked images */
+}
 /* .container {
     max-width: 1200px;
     margin:auto;
@@ -36,25 +106,33 @@ background: #ECD1FF;
   padding: 0 15px;
 } */
 
-.container {
+/* .container {
     max-width: 1200px;
     margin:auto;
     padding: 0 15px;
     width: 100%;
     box-sizing: border-box;
-  }
- .project-container {
+  } */
+ /* .project-container{
      padding: 0 30px;
-
-  } 
-
+  }  */
+h2.work-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.06;
+   color:var(--rich-black); /* Rich Black */
+  margin-top: 0;
+  margin-bottom: 1rem; /* Controls space below the heading */
+  padding: 64px 16px 0 ; /* Moves text down, no padding at bottom */
+  text-align: left; /* Align text to the left */
+} 
 p.font-body{
-  color: #030019b2;
+ color:var(--rich-black); /* Rich Black */
   font-size:18px;
 }
 
 .about-text{
-  color: #030019c0;
+ color:var(--rich-black); /* Rich Black */
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -63,24 +141,7 @@ p.font-body{
   margin-left: 0;
   margin-right: 0;
 }
-.footer-text{
-  color:#FBF5FF
-}
 
-/* .developer{
-  color: #9400FF; 
-  font-size: 2.5rem;
-  display: inline-block;
-  margin-top: 10px;
-} */
-
-/* .creative {
-  color: #40d3edc7; 
-  font-weight: 700;
-  font-size: 1.2rem;
-  display: inline-block;
-  margin-top: 10px;
-}  */
 body {
   margin:0;
   min-height: 100%;
@@ -89,78 +150,84 @@ body {
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 400; /* Sets the font weight to 400 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-  color: #100217;
+  color: var(--rich-black);
 }
 
 .center {
   text-align: center; /* Centers text for every section that has it*/
 }
 
+
 header{
-  background-color: #f9f0f9;
-  padding: 10px;
-  text-align: center; 
+   background: var(--dark-header);
+  padding: 15px 0;
   position: relative;
+  padding: 0;
+}
+
+/* Header container for mobile */
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo styling for mobile */
+.logo {
+  width: 80px !important;
+  height: 80px !important;
+  max-width: 80px;
 }
 
 /* Navigation - mobile first */
 nav {
   width: 100%;
-  margin-top: 1rem;
 }
 
-  nav > ul  {
+nav > ul  {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 nav > ul > li {
   display: inline-block;
-  width: 100px;
 }
 
 nav > ul > li > a {
   padding: 0 15px;
   text-decoration: none;
   font-weight: 700;
-  color: #0B0011; }
+color: var(--magnolia);}
 
-  /* main {
-  padding-top: 133px;
-} */
 #hero {
-background-color: #f8e2f8;
-padding-top:50px;
- padding-bottom:6rem;
-/* the paddign -top was set to 99px but it create a bid space */
-width: 100%;
-position:relative
-/* position:relative;
-display: block;  */
-  /* text-align: center; */
+  background-color: #f8e2f8;
+  padding-top: 20px;
+  padding-bottom: 2.5rem;
+  width: 100%;
+  position: relative;
 }
-.logo #header{
-  max-width: 250px;
-  text-align: center; 
-  }
-
-#header{
-background-color: #f8e2f8;
-padding: 20px;
-
+#hero-section {
+   background-color: #f1eef1;
 }
 
- h1.font-heading {
- font-family: 'Lora', serif;
-  font-weight: 400;
-  font-size: 2.5em;
-  line-height: 1.1;
-  color: #030019; 
-display: block;
+
+h1.font-heading {
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 1.2;
+ color:var(--rich-black); /* Rich Black */
+  display: block;
   text-align: start;
-  position:relative 
-} 
-
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 .font-thintext {
   font-weight: 300; /* Lighter weight for the thin text */
   font-size: 1.2em; /* Slightly smaller than the main heading */
@@ -217,7 +284,7 @@ h4,
 h5,
 h6 {
   font-family: 'Lora', serif;
-  color: #0B0011;
+ color:var(--rich-black); /* Rich Black */
   line-height: 1.4;
 }
 
@@ -243,15 +310,20 @@ li
   font-weight: 400;       /* Regular */
   font-size: 1rem;        /* 16px */
   line-height: 1.6;       /* ~26px */
-  color: #0B0011;         /* Licorice or your chosen dark text color */
+ color:var(--rich-black); /* Rich Black */        /* Licorice or your chosen dark text color */
   margin: 0 0 1rem;       /* spacing between paragraphs */
 }
 
 
-img {
+/* img {
   width: 100%;
-  /* height: auto; */
-  border-radius: 20px; /* Optional: adds rounded corners to images */
+  border-radius: 20px; 
+} */
+
+img {
+max-width: 100%;
+  height: auto;
+  border-radius: 20px; /* Rounded corners for images */
 }
 
 a {
@@ -272,7 +344,8 @@ a:hover{
   padding: 10px 20px; /* Adjusts the padding for the button */
   border-radius: 70px;
   /* border-bottom: 1px solid #0a030e; */
-  transition: 0.2s opacity;
+  transition: background 0.2s ease, color 0.2s ease;
+
 
 }
 
@@ -309,48 +382,20 @@ button, .button, a.button {
   color: #fbf5ff;
 }
 
-footer#contact h2 { margin-bottom: 1rem; }
-footer#contact p { margin-bottom: 1rem; }
-footer#contact .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-  
-}
+
 
 .create-text{
   color:#9400ff;
   text-transform: uppercase;
  font-style: italic;
 }
-footer {
-  background-color: #0a030e; /* Licorice */
-  padding-top: 40px; /* Adds padding to the top of the footer */
-}
 
-.copyright {
-  border-top: 1px solid #ecd1ff; /* Thistle */
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 35px;
-  padding-bottom: 35px;
-  display: flex;
-  font-size: 0.875rem; /* 14px */
-  color: #fbf5ff; /* Light text color for contrast */ 
-}
-
-.copyright p {
-  margin: 0;
-  color: #fbf5ff;
-}
-
+/* 
 .row {
   margin: 25px 0; 
-  /* 25px top and bottom, 0 left and right */
   width: 100%;
   max-width: 100%;
-}
+} */
 
 
 .chip  {
@@ -397,6 +442,12 @@ footer {
   margin-bottom: 3rem;
   align-items: flex-start;
 }
+.content-row {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* 2a) Photo column */
 /* .about-content{
@@ -442,36 +493,44 @@ text-align: center;
 /* 1) Turn your .row into a grid container */
 .skills-section .row {
   display: grid;
-  grid-template-columns: 1fr;    /* single column by default */
-  gap: 2rem;                   /* easy gutters */
-  align-items: stretch;        /* Make grid items stretch to same height */
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-.skills-section .col-md-6 {
+/* .skills-section .col-md-6 {
   float: none !important;
   width: auto !important;
-  display: flex;               /* Make the column a flex container */
-  flex-direction: column;      /* Stack content vertically */
-}
+  display: flex;               
+  flex-direction: column;      
+} */
 
 /* === Carousel Container === */
 .snap-carousel {
-  /* overflow-x: auto; */
-  /* scroll-snap-type: x mandatory; */
-  /* -webkit-overflow-scrolling: touch; */
-  padding: 4rem 0;
-  margin-bottom: 3rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+   /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.snap-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 /* track of slides */
 .snap-track {
   display: flex;
   gap: 1rem;
+  padding: 0 1rem;
 }
 
-/* each card */
+/* each card - consistent sizing */
 .snap-slide {
-  flex: 0 0 220px;            /* card width */
+  flex: 0 0 220px;            /* consistent card width */
   scroll-snap-align: center;  /* snap to center */
   border-radius: 16px;
   overflow: hidden;
@@ -479,6 +538,8 @@ text-align: center;
   transition: transform 0.3s;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   background: #FBF5FF;
+  min-width: 220px;           /* prevent cards from getting too small */
+  height: 280px;              /* fixed height for consistency */
 }
 
 /* alternate rotation on even slides */
@@ -491,20 +552,36 @@ text-align: center;
   transform: rotate(0deg) scale(1.05);
 }
 
-/* ensure images fill the card */
+/* ensure images fill the card and are responsive */
 .snap-slide img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
-/* ==============================
 
 /* Project Section */
-.project-image{
+ /* .case-hero-img img { max-width: 340px; 
+  border-radius: 20px; 
+  box-shadow: 0 6px 40px #9400ff15;} */
+
+
+/* .pb-110 {
+  padding-bottom: 110px; 
+} */
+/* .hero-title {
+  text-align: center;
+  padding-top: 80px;
+} */
+/* Adds bottom padding to the element */
+
+/* .project-image{
   border:4px solid
-  transparent; /* Transparent border for spacing */
-  border-radius: 20px; /* Rounded corners for the image */
-} 
+  transparent; 
+  border-radius: 20px;
+}  */
+ /* Rounded corners for the image */
 /* Add spacing between chip content and the button inside */
 
 /* 1) Ensure the “container” does not fill the entire browser width (optional) *
@@ -521,7 +598,7 @@ text-align: center;
 .quote-section blockquote {
   padding-left: 1rem;          /* Indent the text from the left */
   font-style: italic;          /* Italicize the quote text */
-  color: #09000f;              /* Dark‐gray text (Licorice) for contrast */
+  color:var(--rich-black); /* Rich Black */             /* Dark‐gray text (Licorice) for contrast */
   border-left: 4px solid #9400ff; /* Electric Violet vertical bar */
   line-height: 1.5;            /* Comfortable line spacing */
 }
@@ -535,13 +612,72 @@ text-align: center;
   padding-left: 0.75rem;
 }
 
-#work .row { 
+/* #work .row { 
   padding-bottom: 25px; 
   
+} */
+h2.work-title {
+  /* margin-top: 20px;      */
+  /* margin-bottom: 20px; */
+  padding-top: 20px;        /* Remove extra space above */
+  padding-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  /* text-align: inherit; */
+  text-align: left;
+  color: var(--rich-black);
 }
-.work-title {
-   padding-top:25px; 
+
+/* If you want to target h2 elements with the .work-title class, 
+   this CSS is correct. You do not need to add h2 here unless you want to 
+   specifically target h2.work-title only, like this: */
+
+footer#contact h2 { margin-bottom: 1rem; }
+footer#contact p { margin-bottom: 1rem; }
+footer#contact .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  
 }
+footer {
+   background: var(--dark-header);  padding-top: 40px; /* Adds padding to the top of the footer */
+}
+.footer-text{
+  color: var(--magnolia);
+}
+
+.copyright {
+  border-top: 1px solid #ecd1ff; /* Thistle */
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  font-size: 0.875rem; /* 14px */
+  color: #fbf5ff; /* Light text color for contrast */ 
+}
+
+.copyright p {
+  margin: 0;
+  color: #fbf5ff;
+  
+}
+
+
+/* .project-work{
+  display: block !important;
+}
+.project-work > .col-md-6 {
+  width: 100% !important;
+  float: none !important;
+  display: block;
+}
+.project-work > .col-md-6:first-child {
+  margin-bottom: 2rem;
+} */
 /* ==============================
 Mobile-first base styles
 ================================= */
@@ -552,37 +688,142 @@ Mobile-first base styles
   box-sizing: border-box;
 }
 
-.row {
+/* .row {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+} */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
+/* 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #9400FF;
+  }
+} */
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
+/* hide .about-image on screens smaller than 768px */
+
 @media only screen and (min-width: 640px) {
   header {
-    text-align: unset;
-    padding: 20px 0 13px;
+     text-align: unset;
+    padding: 20px 0;
   }
-
+   .row:not(.project-work) .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .row:not(.content-row) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+     .row:not(.content-row) .col-md-6 {
+    width: 50%;
+    float: right;
+  }
+  .row:not(.project-work) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* Header layout for tablets and up */
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+.project-work {
+    display: block !important;
+  }
+  .project-work > .col-md-6 {
+    width: 100% !important;
+    float: none !important;
+  }
+  
+  /* Logo size for tablets and up */
+  .logo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
   nav {
     width: auto;
-    float: right;
-    margin-top: 4px;
+    margin-top: 0;
+  }
+
+  /* About page layout for tablets and up */
+  #about-page #hero .row {
+    display: flex;
+    align-items: center;
+    /* gap: 2rem; */
+  }
+
+  #about-page #hero .col-md-6:first-child {
+    text-align: left;
+  }
+
+  #about-page #hero h1.font-heading {
+    text-align: left;
+  }
+
+  #about-page #hero h2.font-body {
+    text-align: left;
+  }
+
+  #about-page #hero p.font-body {
+    text-align: left;
+    max-width: none;
+    margin: 0 0 1.5rem 0;
   }
 
   /* Responsive typography for tablets+ */
   h1.font-heading {
     font-size: 2.5rem;
   }
-p.font-body {
-  font-size: 1rem;  /* Reduced from 1.125rem */
+  
+  p.font-body {
+    font-size: 1rem;  /* Reduced from 1.125rem */
   }
+  
   .marquee {
-  font-size: 1.75rem;  /* Reduced from 2rem */
+    font-size: 1.75rem;  /* Reduced from 2rem */
   }
 
+ .skills-section .row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+  .skills-section .col-md-6 {
+    width: auto !important;
+  }
+  .responsive-img-bescene,
+  .responsive-img-projectcasting
+  .responsive-img-userflow {
+    width: 80%;
+    max-width: 340px;
+    margin-bottom: 1rem;
   /* Enable floating for larger screens */
   [class*="col-"] {
   float: left;
@@ -607,10 +848,6 @@ p.font-body {
   .col-md-11 { width: 91.666667%; }
   .col-md-12 { width: 100.000000%; }
 
-.skills-section .row {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: stretch;  /* Maintain equal height in two-column layout */
-  }
 
 } 
 /* position the text side-by size */
@@ -626,6 +863,11 @@ Large devices (1024px or larger)
 
   .marquee {
     font-size: 2.5rem;
+  }
+/* Desktop and up: more space */
+
+  .skills-section .row {
+    gap: 3rem;
   }
 
   /* Large device grid */
@@ -653,3 +895,43 @@ Extra-large devices (1920px or larger)
 ================================= */
 /* @media only screen and (min-width: 1920px) {
 } */
+
+/* About Page Specific Styles */
+#about-page #hero .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-page #hero h1.font-heading {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+#about-page #hero h1.font-heading .text-h1 {
+  white-space: nowrap;
+}
+
+#about-page #hero h2.font-body {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+#about-page #hero p.font-body {
+  max-width: 600px;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  width: 100%;
+}
+
+#about-page .about-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+}
