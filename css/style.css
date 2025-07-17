@@ -44,36 +44,67 @@ color: #9400FF;
 background: #ECD1FF;
 }
 .container {
-  max-width: 1000px;
+   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
 .row {
   width: 100%;
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 2.5rem;
   clear: both;
   display: flex;
   flex-wrap: wrap;
 }
 .col-md-6 {
   width: 100%;
-  padding: 0 12px;
+   padding: 0 12px;
   box-sizing: border-box;
 }
 
-/* Project image styling */
-.project-image {
-  border: 4px solid transparent; 
-  border-radius: 20px; 
-  margin-bottom: 1.5rem;
+ main.container.about-content{
+  margin: 0;
+}
+.animation-image {
   width: 100%;
-  height: auto;
-  display: block;
-} 
+max-width: 100%;
+height: auto;
+
+}
+
+@keyframes color-change {
+    from {fill: #edc655;}
+    to {fill: #f76414;}
+}
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+@keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+.cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px)}
+    to {transform: translate(100px,48px)}
+}
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
 .responsive-img-bescene,
 .responsive-img-projectcasting {
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   height: auto;
   border-radius: 30px;
@@ -81,10 +112,10 @@ background: #ECD1FF;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.5rem; /* Add vertical spacing between stacked images */
+  margin-bottom: 5rem; /* Add vertical spacing between stacked images */
 }
 .responsive-img-userflow {
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   height: auto;
   border-radius: 30px;
@@ -113,9 +144,7 @@ background: #ECD1FF;
     width: 100%;
     box-sizing: border-box;
   } */
- /* .project-container{
-     padding: 0 30px;
-  }  */
+
 h2.work-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -128,7 +157,7 @@ h2.work-title {
 } 
 p.font-body{
  color:var(--rich-black); /* Rich Black */
-  font-size:18px;
+  font-size: 1rem;
 }
 
 .about-text{
@@ -165,7 +194,7 @@ header{
   padding: 0;
 }
 
-/* Header container for mobile */
+
 header .container {
   display: flex;
   flex-direction: column;
@@ -226,7 +255,7 @@ h1.font-heading {
   text-align: start;
   position: relative;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .font-thintext {
   font-weight: 300; /* Lighter weight for the thin text */
@@ -263,12 +292,12 @@ font-style: italic;
 }
 
 .marquee {
-            display: inline-block;
-            min-width: 200%;
-              white-space: nowrap;
-            font-size: 1.5rem; /* Smaller for mobile */
-              font-weight: bold;
-              animation: marquee 15s linear infinite;
+ display: inline-block;
+ min-width: 200%;
+white-space: nowrap;
+font-size: 1.5rem; /* Smaller for mobile */
+ font-weight: bold;
+ animation: marquee 15s linear infinite;
             
           }
 .text-h1{
@@ -284,8 +313,10 @@ h4,
 h5,
 h6 {
   font-family: 'Lora', serif;
- color:var(--rich-black); /* Rich Black */
-  line-height: 1.4;
+ color:var(--rich-black); 
+ margin:0;
+  /* Reset margin for headings */
+  /* line-height: 1.4; */
 }
 
 h1 {
@@ -299,95 +330,105 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 600;
 }
-
-p,
-li
-{
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 400;       /* Regular */
-  font-size: 1rem;        /* 16px */
-  line-height: 1.6;       /* ~26px */
- color:var(--rich-black); /* Rich Black */        /* Licorice or your chosen dark text color */
-  margin: 0 0 1rem;       /* spacing between paragraphs */
-}
-
-
-/* img {
-  width: 100%;
-  border-radius: 20px; 
-} */
 
 img {
 max-width: 100%;
   height: auto;
-  border-radius: 20px; /* Rounded corners for images */
+  border-radius: 10px; /* Rounded corners for images */
 }
 
-a {
-text-decoration: underline;
-color: #fbf5ff;
+.p-description {
+margin: 15px 0;
 }
 
-a:hover{
-  color: #9400ff; /* Electric Violet */
-  text-decoration: none; /* Removes underline on hover */
-}
-
-.button {
+.chip  {
   display: inline-block;
-  background-color: #9400ff; /* Electric Violet */
-  color: #fbf5ff;
-  font-weight: 400;
-  padding: 10px 20px; /* Adjusts the padding for the button */
-  border-radius: 70px;
-  /* border-bottom: 1px solid #0a030e; */
-  transition: background 0.2s ease, color 0.2s ease;
-
-
+  margin: 0 10px 10px 0;
+   /* Increased bottom margin for more space below chips */
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 20px;
+  border: 1px solid #c5c2cc;
+  padding: 5px 20px; /* Added vertical padding for taller chips */
+  font-size: 0.9rem;
+  background-color: transparent;
+  max-width: 100%; /* Prevent overflow, fit within column */
+  box-sizing: border-box;
+  white-space: nowrap; /* Prevent chips from breaking into multiple lines */
 }
 
-.button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
-  text-decoration: none; /* Licorice */
-  color: #fbf5ff;
-
-}
-
-.button:focus {
-  outline: 2px solid #ecd1ff; /* Thistle */
-}
-
-.button:active {
-  background-color: #ecd1ff; /* Darker violet */
-}
-
-/* Remove underline from button or link */
-button, .button, a.button {
-  text-decoration: none;
-}
-
-.button.contact {
-    background-color: #9400ff;
-  /* background-color: transparent; */
-  color: #fbf5ff;
+.project-button {
+  background-color: var(--electric-violet);
   text-transform: uppercase;
-  border: 2px solid #9400ff;
+  border: 1px solid var(--electric-violet);
+  text-align: center;
+  font-weight: 400;
+    padding: 0.5em 1em; /* Adjusts the padding for the button */
+  margin: 2rem 0; /* Adds space above and below the button */
+  border-radius: 20px;
+  transition: background 0.2s ease, color 0.2s ease;
+  display: block;
+}
+.button{
+ text-decoration: none; 
+ color: var(--magnolia);
 }
 
-.button.contact:hover {
-    background-color: #9500ff;
-  color: #fbf5ff;
+.project-button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none; 
+  color: #9900ff;
 }
 
 
+.resume-button:hover,
+.project-button:hover {
+  opacity: 0.6;
+  background-color: var(--electric-violet);
+}
+
+
+/* PB Button  */
+.pb-button  {
+  display: inline-block;
+  padding: 6px 18px;
+  font-size: 1rem;
+  background: none;
+  border: 2px solid var(--electric-violet);
+  border-radius: 20px;
+  color: var(--magnolia);
+   transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+ a{
+  text-decoration: none; /* Ensures no underline on links */
+}
+
+.pb-button:hover {
+  background: #9000ff;
+  color: var(--magnolia);
+}
 
 .create-text{
   color:#9400ff;
   text-transform: uppercase;
  font-style: italic;
+}
+.resume-button {
+  display: block;              /* Makes the button take full width */
+  margin: 0 auto;              /* Centers the button horizontally */
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  background-color: var(--electric-violet);
+  border: 2px solid var(--electric-violet);
+  border-radius: 20px;
+  color: var(--magnolia);
+  transition: background 0.2s ease, color 0.2s ease; 
+  cursor: pointer;
+  text-align: center;          /* Centers text inside the button */
 }
 
 /* 
@@ -398,20 +439,21 @@ button, .button, a.button {
 } */
 
 
-.chip  {
-  display: inline-block;
-  margin: 0 10px 10px 0; /* Adds space to the right and bottom of each chip */
-  text-align: center; /* Center the text in each skill item */
-  text-transform: capitalize;
-  border-radius: 17px;
-  border: 1px solid #e4d2ed; /* Electric Violet border */
-  padding: 0px 25px; /* Increased padding */
-  font-size: 1.1rem; /* Slightly larger text */
-  /* Magnolia background for contrast */
-  background-color: transparent;
-    margin-bottom:30px;
+/* 
+.skills-list, .tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;  
+} */
 
+/* Align button to the bottom of the .snap-slide image */
+.snap-slide .button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 16px; /* Space between image and button */
+  text-align: center;
 }
+
 .text-bold {
   font-weight: 700; /* Makes the text bold */
 }
@@ -439,7 +481,7 @@ button, .button, a.button {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   align-items: flex-start;
 }
 .content-row {
@@ -450,12 +492,18 @@ button, .button, a.button {
 }
 
 /* 2a) Photo column */
-/* .about-content{
-  flex: 1 1 250px;
-text-align: center;
-  margin-bottom: 2rem; 
-}  */
 
+/* about page */
+p,
+li
+{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;       /* Regular */
+  font-size: 1rem;        /* 16px */
+  line-height: 1.6;       /* ~26px */
+ color:var(--rich-black); /* Rich Black */        /* Licorice or your chosen dark text color */
+  margin: 0 0 1rem;       /* spacing between paragraphs */
+}
 .about-img img {
   width: 100%;
   max-width: 300px;
@@ -490,19 +538,19 @@ text-align: center;
   margin-bottom: 0;
 }
 
-/* 1) Turn your .row into a grid container */
 .skills-section .row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Mobile: single column */
   gap: 2rem;
+  align-items: stretch;
 }
 
-/* .skills-section .col-md-6 {
+.skills-section .col-md-6 {
   float: none !important;
   width: auto !important;
-  display: flex;               
-  flex-direction: column;      
-} */
+  display: flex;               /* Make the column a flex container */
+  flex-direction: column;      /* Stack content vertically */
+}
 
 /* === Carousel Container === */
 .snap-carousel {
@@ -561,31 +609,6 @@ text-align: center;
   border-radius: 16px;
 }
 
-/* Project Section */
- /* .case-hero-img img { max-width: 340px; 
-  border-radius: 20px; 
-  box-shadow: 0 6px 40px #9400ff15;} */
-
-
-/* .pb-110 {
-  padding-bottom: 110px; 
-} */
-/* .hero-title {
-  text-align: center;
-  padding-top: 80px;
-} */
-/* Adds bottom padding to the element */
-
-/* .project-image{
-  border:4px solid
-  transparent; 
-  border-radius: 20px;
-}  */
- /* Rounded corners for the image */
-/* Add spacing between chip content and the button inside */
-
-/* 1) Ensure the “container” does not fill the entire browser width (optional) *
-
 /* 2) Style the quote‐section background + spacing */
 .quote-section {
   background-color: #fbf5ff;   /* Thistle */
@@ -611,28 +634,28 @@ text-align: center;
 .quote-section blockquote {
   padding-left: 0.75rem;
 }
-
-/* #work .row { 
-  padding-bottom: 25px; 
-  
-} */
-h2.work-title {
-  /* margin-top: 20px;      */
-  /* margin-bottom: 20px; */
-  padding-top: 20px;        /* Remove extra space above */
-  padding-bottom: 20px;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1;
-  /* text-align: inherit; */
-  text-align: left;
-  color: var(--rich-black);
+.sub-title {
+position: relative;
+display: inline-block;
+font-size: 1em;
+line-height: 1.6;
+color: var(--rich-black); /* Rich Black */
+margin: 20px 0;
+ padding-left: 19px;
 }
 
-/* If you want to target h2 elements with the .work-title class, 
-   this CSS is correct. You do not need to add h2 here unless you want to 
-   specifically target h2.work-title only, like this: */
+.sub-title:before{
+  background: var(--electric-violet);
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  left: 0px;
+  top: 7px;
+  border-radius: 50%;
+}
 
+  
 footer#contact h2 { margin-bottom: 1rem; }
 footer#contact p { margin-bottom: 1rem; }
 footer#contact .social-links {
@@ -666,28 +689,6 @@ footer {
   
 }
 
-
-/* .project-work{
-  display: block !important;
-}
-.project-work > .col-md-6 {
-  width: 100% !important;
-  float: none !important;
-  display: block;
-}
-.project-work > .col-md-6:first-child {
-  margin-bottom: 2rem;
-} */
-/* ==============================
-Mobile-first base styles
-================================= */
-/* Grid system - mobile first */
-[class*="col-"] {
-  width: 100%;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
-
 /* .row {
   width: 100%;
   max-width: 100%;
@@ -702,23 +703,6 @@ Mobile-first base styles
   }
 }
 /* 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  0%, 100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #9400FF;
-  }
-} */
 
 /* ==============================
 Medium devices (640px and larger)
@@ -730,22 +714,6 @@ Medium devices (640px and larger)
      text-align: unset;
     padding: 20px 0;
   }
-   .row:not(.project-work) .col-md-6 {
-    width: 50%;
-    float: left;
-  }
-  .row:not(.content-row) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-     .row:not(.content-row) .col-md-6 {
-    width: 50%;
-    float: right;
-  }
-  .row:not(.project-work) {
-    display: flex;
-    flex-wrap: wrap;
-  }
   /* Header layout for tablets and up */
   header .container {
     flex-direction: row;
@@ -753,14 +721,7 @@ Medium devices (640px and larger)
     align-items: center;
     gap: 0;
   }
-.project-work {
-    display: block !important;
-  }
-  .project-work > .col-md-6 {
-    width: 100% !important;
-    float: none !important;
-  }
-  
+
   /* Logo size for tablets and up */
   .logo {
     width: 100px !important;
@@ -796,8 +757,7 @@ Medium devices (640px and larger)
     max-width: none;
     margin: 0 0 1.5rem 0;
   }
-
-  /* Responsive typography for tablets+ */
+  
   h1.font-heading {
     font-size: 2.5rem;
   }
@@ -809,21 +769,32 @@ Medium devices (640px and larger)
   .marquee {
     font-size: 1.75rem;  /* Reduced from 2rem */
   }
-
- .skills-section .row {
+.skills-section .row {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;  /* Maintain equal height in two-column layout */
+  }
+ /* .skills-section .row {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
   .skills-section .col-md-6 {
     width: auto !important;
-  }
+    padding: 0 12px;
+  } */
   .responsive-img-bescene,
   .responsive-img-projectcasting
   .responsive-img-userflow {
     width: 80%;
     max-width: 340px;
     margin-bottom: 1rem;
+  }
+  
+  .skills-section .col-md-6 {
+    width: 100%;
+    display: block;
+    float: none;
+  }
   /* Enable floating for larger screens */
   [class*="col-"] {
   float: left;
@@ -840,7 +811,10 @@ Medium devices (640px and larger)
   .col-md-3 { width: 25.000000%; }
   .col-md-4 { width: 33.333333%; }
   .col-md-5 { width: 41.666667%; }
-  .col-md-6 { width: 50.000000%; }
+  .col-md-6 { 
+    width: 50.000000%; 
+    padding: 0 12px;
+  }
   .col-md-7 { width: 58.333333%; }
   .col-md-8 { width: 66.666667%; }
   .col-md-9 { width: 75.000000%; }
@@ -866,10 +840,13 @@ Large devices (1024px or larger)
   }
 /* Desktop and up: more space */
 
-  .skills-section .row {
+  /* .skills-section .row {
     gap: 3rem;
-  }
+  } */
 
+ .skills-section .row {
+    grid-template-columns: 1fr 1fr; /* Desktop: two columns side by side */
+  }
   /* Large device grid */
   .col-lg-1 { width: 8.333333%; }
   .col-lg-2 { width: 16.666667%; }
@@ -888,13 +865,6 @@ Large devices (1024px or larger)
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
-}
-
-/* ==============================
-Extra-large devices (1920px or larger)
-================================= */
-/* @media only screen and (min-width: 1920px) {
-} */
 
 /* About Page Specific Styles */
 #about-page #hero .col-md-6 {
@@ -934,4 +904,22 @@ Extra-large devices (1920px or larger)
   max-width: 100%;
   height: auto;
 }
+.resume-button {
+  display: block;
+  margin-left: 0 !important; /* Force left alignment */
+  margin-right: auto !important;
+  /* padding: 0.4em 0.8em;  */
+  /* Reduced padding for less space */
+  padding: 0.6em 8em;
+  background-color: var(--electric-violet);
+  border: 2px solid var(--electric-violet);
+  border-radius: 20px;
+  color: var(--magnolia);
+  transition: 0.2s opacity;
+  cursor: pointer;
+  text-align: left; /* Align text inside button to the left */
 }
+}
+
+
+
