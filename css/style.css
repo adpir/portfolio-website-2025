@@ -40,11 +40,19 @@ background: var(--thistle);
    max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 2rem;
+
 }
 
 .row {
   margin: 25px 0;
 }
+/* .row::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+
 
  /* main.container.about-content{
   margin: 0;
@@ -259,15 +267,23 @@ nav > ul > li > a:hover {
   padding: 0 0 10px;
 }
 
-
-
 #hero {
+  background-color: var(--thistle);
+  padding: 20px 0;
+  width: 100%;
+  text-align: center; /*center text in the hero section*/
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+/* #hero {
   background-color: var(--thistle);
   padding-top: 20px;
   padding-bottom: 2.5rem;
   width: 100%;
   position: relative;
-}
+} */
 #hero-section {
    background-color: #f1eef1;
 }
@@ -395,7 +411,7 @@ margin: 18px 0;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
-  padding: 1em 5em;
+  padding: 0.6em 2em;
   margin: 3rem auto;
   border-radius: 24px;
   transition: background 0.2s ease, color 0.2s ease;
@@ -418,8 +434,8 @@ margin: 18px 0;
 
 
 /* PJ Button  */
-/* .pj-button  {
-  display: inline-block;
+
+  /* display: inline-block;
   padding: 6px 10px;
   font-size: 1rem;
   background: none;
@@ -428,8 +444,8 @@ margin: 18px 0;
   color: var(--magnolia);
    transition: background 0.2s ease, color 0.2s ease;
   cursor: pointer;
-} */
- 
+}
+  */
 
 .button{
   display: inline-block;
@@ -533,11 +549,10 @@ margin: 20px 0;
   display: inline-block;         
   overflow: hidden;            
   border-right: .15em solid var(--electric-violet); 
-  font-size: 1.5rem;                
-  animation: 
-    typing 4s steps(50,end),    * cursor blink */
+  font-size: 1.5rem;
 
-
+ } */
+ 
 
 .skills-list, .tools-list {
   list-style-type: none;
@@ -547,18 +562,18 @@ margin: 20px 0;
 
 /* About Me */
 .about-section {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 1.5rem;
   align-items: flex-start;
 }
-.content-row {
+/* .content-row {
   margin-bottom: 1.5rem;
   width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 /* 2a) Photo column */
 
@@ -572,9 +587,10 @@ li
   line-height: 1.6;       /* ~26px */
  color:var(--rich-black); /* Rich Black */        /* Licorice or your chosen dark text color */
 }
-.about-img img {
+.about-img  {
   width: 100%;
   max-width: 300px;
+
 }
 
 .card {
@@ -810,6 +826,7 @@ footer {
   align-items: center;
 }
 
+
 /* .row {
   width: 100%;
   max-width: 100%;
@@ -823,11 +840,45 @@ footer {
     transform: translateX(-50%);
   }
 }
-/* 
 
-/* ==============================
-Medium devices (640px and larger)
-================================= */
+ #about-page #hero .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-page #hero h1.font-heading {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+#about-page #hero h1.font-heading .text-h1 {
+  white-space: nowrap;
+}
+
+#about-page #hero h2.font-body {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+#about-page #hero p.font-body {
+  max-width: 600px;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  width: 100%;
+}
+
+#about-page .about-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+} 
+
 /* hide .about-image on screens smaller than 768px */
 
 @media only screen and (min-width: 641px) {
@@ -993,10 +1044,7 @@ Medium devices (640px and larger)
   .col-md-3 { width: 25.000000%; }
   .col-md-4 { width: 33.333333%; }
   .col-md-5 { width: 41.666667%; }
-  .col-md-6 { 
-    width: 50.000000%; 
-    padding: 0 12px;
-  }
+  .col-md-6 { width: 50.000000%; }
   .col-md-7 { width: 58.333333%; }
   .col-md-8 { width: 66.666667%; }
   .col-md-9 { width: 75.000000%; }
@@ -1004,7 +1052,7 @@ Medium devices (640px and larger)
   .col-md-11 { width: 91.666667%; }
   .col-md-12 { width: 100.000000%; }
 
-
+ 
 
 /* position the text side-by size */
 
@@ -1099,43 +1147,7 @@ X-large devices (1440px or larger)
 
 
 /* About Page Specific Styles */
-#about-page #hero .col-md-6 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-#about-page #hero h1.font-heading {
-  max-width: 600px;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  width: 100%;
-}
-
-#about-page #hero h1.font-heading .text-h1 {
-  white-space: nowrap;
-}
-
-#about-page #hero h2.font-body {
-  max-width: 600px;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  width: 100%;
-}
-
-#about-page #hero p.font-body {
-  max-width: 600px;
-  margin: 0 0 1.5rem 0;
-  text-align: left;
-  width: 100%;
-}
-
-#about-page .about-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
 .resume-button {
   display: block;
   margin-left: 0 !important; /* Force left alignment */
@@ -1148,6 +1160,6 @@ X-large devices (1440px or larger)
   color: var(--rich-black);
   transition: 0.2s opacity;
   cursor: pointer;
-  text-align: left; /* Align text inside button to the left */
+  text-align: center; /* Align text inside button to the left */
 }
 }
