@@ -39,20 +39,11 @@ background: var(--thistle);
 .container {
    max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
 }
 
 .row {
-  width: 100%;
-  margin: 0 0 2.5rem;
-  clear: both;
-  display: flex;
-  flex-wrap: wrap;
-}
-.col-md-6 {
-  width: 100%;
-   padding: 0 12px;
-  box-sizing: border-box;
+  margin: 25px 0;
 }
 
  /* main.container.about-content{
@@ -95,18 +86,6 @@ height: auto;
     animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-/* .responsive-img-bescene,
-.responsive-img-projectcasting {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 30px;
-  box-shadow: 0 6px 40px rgba(237, 237, 237, 0.15);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;} */
-  /* margin-bottom: 5rem; */
-  /* Add vertical spacing between stacked images */
 
 .responsive-img-userflow {
   width: 100%;
@@ -119,25 +98,6 @@ height: auto;
   margin-right: auto;
   margin-bottom: 1.5rem; /* Add vertical spacing between stacked images */
 }
-/* .container {
-    max-width: 1200px;
-    margin:auto;
-   padding: 0 15px; 
-  } */
-/* .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
-
-/* .container {
-    max-width: 1200px;
-    margin:auto;
-    padding: 0 15px;
-    width: 100%;
-    box-sizing: border-box;
-  } */
 
 h2.work-title {
   font-size: 1.75rem;
@@ -166,8 +126,7 @@ p.font-body{
 }
 
 body {
-  margin:0;
-  min-height: 100%;
+   margin:0;
   background-color: #FBF5FF; /* Magnolia */
   font-family: "Space Grotesk", sans-serif;
   font-size: 16px; /* Sets the font size to 16px */
@@ -181,6 +140,7 @@ body {
 }
 
 
+
 header{
    background: var(--dark-header);
   padding: 15px 0;
@@ -188,24 +148,30 @@ header{
   padding: 0;
 }
 
-
-header .container {
+/* header .container {
+  position: relative;
+  height: auto; 
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-}
+} */
+/* .logo {
+  max-width: 80px;
+  margin: 0;
+} */
 
 /* Logo styling for mobile */
-.logo {
-  width: 80px !important;
-  height: 80px !important;
-  max-width: 80px;
-}
+/* .logo {
+  max-width: 80px; 
+  float: left;
+  margin-top: 0.5rem;
+} */
 
-/* Navigation - mobile first */
+.logo {
+  max-width: 150px;
+}
+/* Navigation styling for mobile */
 nav {
-  width: 100%;
+  width: auto;
 }
 
 nav > ul  {
@@ -213,8 +179,9 @@ nav > ul  {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Align hamburger to the right */
   gap: 0.5rem;
+  flex-wrap: wrap; /* Allow wrapping on very small screens */
 }
 
 nav > ul > li {
@@ -222,10 +189,77 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
-  padding: 0 15px;
+  padding: 0.6rem 1rem; /* Improved padding for better touch targets */
   text-decoration: none;
   font-weight: 700;
-color: var(--magnolia);}
+  color: var(--magnolia);
+  transition: color 0.2s ease; /* Smooth hover transition */
+}
+
+a {
+  color: var(--rich-black);
+  font-weight: 400;
+  text-decoration: none; /* Ensures no underline on links */
+}
+a:hover {
+  /* opacity: 0.8; */
+ color: var(--rich-black);
+}
+nav > ul > li:hover {
+  color: var(--electric-violet);
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+   color: var(--electric-violet);
+}
+/* Ensures no underline on links */
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 50px; 
+  font-size: 30px;
+  color: var(--thistle);
+  padding-right: 0;
+}
+
+.navtoggle.responsive li  {
+    text-align: center;
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive nav > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  width: 100%; /* Full width for mobile menu items */
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+
 
 #hero {
   background-color: var(--thistle);
@@ -335,12 +369,12 @@ width: 100%;
 }
 
 .p-description {
-margin: 15px 0;
+margin: 18px 0;
 }
 
 .chip  {
   display: inline-block;
-  margin: 0 10px 10px 0;
+  margin: 0 20px 20px 0;
    /* Increased bottom margin for more space below chips */
   text-align: center;
   text-transform: capitalize;
@@ -355,13 +389,14 @@ margin: 15px 0;
 }
 
 
-.project-button ,.resume-button {
+.project-button,
+.resume-button {
   background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); /*  gradient */
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
-  padding: 0.5em 5em;
-  margin: 2rem auto;
+  padding: 1em 5em;
+  margin: 3rem auto;
   border-radius: 24px;
   transition: background 0.2s ease, color 0.2s ease;
   display: block;
@@ -369,7 +404,7 @@ margin: 15px 0;
 
 .project-button.button{
  text-decoration: none; 
- color: var(--magnolia);
+ color: var(--rich-black);
 }
 
 
@@ -394,20 +429,7 @@ margin: 15px 0;
    transition: background 0.2s ease, color 0.2s ease;
   cursor: pointer;
 } */
- a{
-  color:var(--magnolia);
-  text-decoration: none; /* Ensures no underline on links */
-}
-a:hover{
-    /* opacity: 0.8; */
- color: var(--magnolia);
-}
-nav > ul > li:hover {
-   color: var(--electric-violet);
-}
-nav > ul > li > a:hover {
-   color: var(--electric-violet);
-}
+ 
 
 .button{
   display: inline-block;
@@ -421,7 +443,7 @@ nav > ul > li > a:hover {
 }
 .button:hover{
   opacity: 0.8;
-  color: var(--magnolia);
+  color: var(--rich-black);
 }
 
  .user-personas-image img{
@@ -458,15 +480,6 @@ nav > ul > li > a:hover {
   -webkit-text-fill-color: transparent;
  font-style: italic;
 }
-.column-col  {
- width: 100%;
-  max-width: 700px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 
 
 .quote{
@@ -488,9 +501,9 @@ margin: 20px 0;
   top: 7px;
   border-radius: 50%;
 } 
-.resume-button {
-  display: block;              /* Makes the button take full width */
-  margin: 0 auto;              /* Centers the button horizontally */
+/* .resume-button {
+  display: block;            
+  margin: 0 auto;           
   padding: 0.5em 1em;
   font-size: 1rem;
   background-color: var(--electric-violet);
@@ -499,8 +512,8 @@ margin: 20px 0;
   color: var(--magnolia);
   transition: background 0.2s ease, color 0.2s ease; 
   cursor: pointer;
-  text-align: center;          /* Centers text inside the button */
-}
+  text-align: center;          
+} */
 
 
 /* Align button to the bottom of the .snap-slide image */
@@ -516,15 +529,14 @@ margin: 20px 0;
 }
 
 /* Typewriter container */
- .typewriter {
-  display: inline-block;          /* shrink to text width */
-  overflow: hidden;               /* hide the overflowing text */
-  border-right: .15em solid var(--electric-violet); /* caret */
-  font-size: 1.5rem;                /* adjust as needed */
+ /* .typewriter {
+  display: inline-block;         
+  overflow: hidden;            
+  border-right: .15em solid var(--electric-violet); 
+  font-size: 1.5rem;                
   animation: 
-    typing 4s steps(50,end),      /* type on */
-    blink-caret .75s step-end infinite; /* cursor blink */
-}
+    typing 4s steps(50,end),    * cursor blink */
+
 
 
 .skills-list, .tools-list {
@@ -559,7 +571,6 @@ li
   font-size: 1rem;        /* 16px */
   line-height: 1.6;       /* ~26px */
  color:var(--rich-black); /* Rich Black */        /* Licorice or your chosen dark text color */
-  margin: 0 0 1rem;       /* spacing between paragraphs */
 }
 .about-img img {
   width: 100%;
@@ -567,7 +578,7 @@ li
 }
 
 .card {
-  background-color: var(--light-purple);
+  background-color: var(--thistle);
   border: 1px solid var(--light-purple);
   border-radius: 8px;
   padding: 1.5rem;
@@ -819,7 +830,7 @@ Medium devices (640px and larger)
 ================================= */
 /* hide .about-image on screens smaller than 768px */
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
      text-align: unset;
     padding: 20px 0;
@@ -830,18 +841,76 @@ Medium devices (640px and larger)
     justify-content: space-between;
     align-items: center;
     gap: 0;
+    padding: 0 1rem; 
   }
 
-  /* Logo size for tablets and up */
+  /* Reset float positioning for larger screens */
   .logo {
-    width: 100px !important;
-    height: 100px !important;
+    float: none;
+    margin-top: 0;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0; /* Remove bottom margin on larger screens */
+  }
+
+  nav {
+    float: none;
+    width: auto;
   }
   
-  nav {
-    width: auto;
-    margin-top: 0;
+  nav > ul {
+    justify-content: flex-end; /* Right-align navigation on desktop */
+    margin: 1em 0;
+    display: flex;
+    float:right
   }
+ 
+  /* Hide hamburger icon on desktop */
+  .navtoggle li .icon {
+    display: none !important;
+  }
+   .navtoggle li {
+    display: inline-block !important;
+  }
+
+  .navtoggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+   .navtoggle nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  /* Show all navigation items on desktop */
+  .navtoggle li:not(:last-child) {
+    display: inline-block !important;
+  }
+ 
+.navtoggle.responsive nav {
+  padding: 0; /* Reset padding for desktop */
+}
+
+.navtoggle.responsive nav > ul {
+  display: flex !important; /* Override to flex for desktop */
+  justify-content: center;
+}
+
+.navtoggle.responsive li  {
+  display: inline-block !important;
+  padding: 0;
+  border-top: none;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0;
+}
+
+
 
   /* About page layout for tablets and up */
   #about-page #hero .row {
@@ -890,14 +959,27 @@ Medium devices (640px and larger)
     max-width: 340px;
     padding: 1rem;
   }
+
+  .column-col  {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+} 
   .skills-section .col-md-6 {
     width: 100%;
     display: block;
     float: none;
   }
   /* Enable floating for larger screens */
-  [class*="col-"] {
-  float: left;
+ [class*="col-"] {
+    float: left;
+    padding: 10px;
   }
   .row::after {
   content: "";
@@ -923,7 +1005,7 @@ Medium devices (640px and larger)
   .col-md-12 { width: 100.000000%; }
 
 
-} 
+
 /* position the text side-by size */
 
 /* ==============================
@@ -934,6 +1016,49 @@ Large devices (1024px or larger)
   h1.font-heading {
     font-size: 4em;
   }
+  .responsive-mockoup-center img{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .responsive-mockoup-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Set a height if you want vertical centering */
+  }
+  
+  /* Ensure hamburger is hidden and navigation is visible on large screens */
+  .navtoggle li .icon {
+    display: none !important;
+  }
+  
+  .navtoggle li:not(:last-child) {
+    display: inline-block !important;
+  }
+  
+.navtoggle.responsive nav {
+  padding: 0;
+}
+
+  .navtoggle.responsive nav > ul {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+
+.navtoggle.responsive li  {
+  display: inline-block !important;
+  padding: 0;
+  border-top: none;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0;
+}
 
   .marquee {
     font-size: 2.5rem;
@@ -962,13 +1087,16 @@ Large devices (1024px or larger)
   .col-lg-12 { width: 100.000000%; }
 
   .project-button {
-    margin-top: 0.7rem; /* Reduce top margin for tighter alignment */
+    /* margin-top: 0.7rem;  */
     align-self: flex-start;
+}
+
 }
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
+
 
 /* About Page Specific Styles */
 #about-page #hero .col-md-6 {
@@ -1014,15 +1142,12 @@ X-large devices (1440px or larger)
   margin-right: auto !important;
   /* padding: 0.4em 0.8em;  */
   /* Reduced padding for less space */
-  padding: 0.6em 8em;
-     background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); /* Example gradient */
+  padding: 0.9em 9em;
   border: none;
   border-radius: 20px;
-  color: var(--magnolia);
+  color: var(--rich-black);
   transition: 0.2s opacity;
   cursor: pointer;
   text-align: left; /* Align text inside button to the left */
 }
-}
-
 }

@@ -20,20 +20,37 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link
       rel="stylesheet"
-      href="https://unicons.iconscout.com/release-pro/v4.0.8/css/solid.css?key=8a31f260-6b6a-11ef-8ebd-0242ac140003"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body id="home-page" class="portfolio">
-    <header id="header">
+    <header>
       <div class="container">
-        <img class="logo" src="./img/logo/SVG/mind.svg" alt="Logo" />
-        <nav class="navigation">
-          <ul>
-            <li><a href="index.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="navtoggle" id="myNavtoggle">
+          <img class="logo" src="./img/logo/SVG/mind.svg" alt="Logo" />
+          <nav class="navigation">
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon"
+                  onclick="menuToggle()"
+                  ><i class="fas fa-bars"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -55,10 +72,10 @@
         </div>
       </div>
       <section id="work-section">
-        <div class="container project-container">
+        <div class="container">
           <h3 class="sub-title">Featured Projects</h3>
           <div class="row">
-            <div class="col-md-6 col-lg-7 analysis">
+            <div class="col-md-6 col-lg-7">
               <picture>
                 <source
                   srcset="./img/sl8/1x/SL8@1x.jpg"
@@ -71,7 +88,7 @@
                 />
               </picture>
             </div>
-            <div class="col-md-6 col-lg-5 analysis">
+            <div class="col-md-6 col-lg-5">
               <h3>
                 SL8:
                 <span class="subheading-title"
@@ -2527,6 +2544,11 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4lQnJGfGFf2rQzmvM3T4EcjTDF+N1oRrR+ybw="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

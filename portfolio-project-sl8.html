@@ -19,27 +19,37 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link
       rel="stylesheet"
-      href="https://unicons.iconscout.com/release-pro/v4.0.8/css/solid.css?key=8a31f260-6b6a-11ef-8ebd-0242ac140003"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body id="home-page" class="portfolio">
-    <header id="header">
-      <div class="container header-container">
-        <img
-          class="logo"
-          src="./img/logo/SVG/mind.svg"
-          style="width: 100px; height: 100px"
-          alt="Logo"
-        />
-        <nav class="navigation">
-          <ul>
-            <li>
-              <a href="index.html">Work</a>
-            </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+    <header>
+      <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
+          <img class="logo" src="./img/logo/SVG/mind.svg" alt="Logo" />
+          <nav class="navigation">
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon"
+                  onclick="menuToggle()"
+                  ><i class="fas fa-bars"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -57,17 +67,18 @@
         </div> -->
         <div class="hero-image-section">
           <div class="container">
-          <div class="hero-image">
-            <picture>
-              <source
-                srcset="./img/sl8/1x/SL8@1x.jpg"
-                media="(max-width:767px)"
-              />
-              <img
-                src="./img/sl8/2x/SL8@2x.jpg"
-                alt="SL8 SL8IDesktop_mockups"
-              />
-            </picture>
+            <div class="hero-image">
+              <picture>
+                <source
+                  srcset="./img/sl8/1x/SL8@1x.jpg"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./img/sl8/2x/SL8@2x.jpg"
+                  alt="SL8 SL8IDesktop_mockups"
+                />
+              </picture>
+            </div>
           </div>
         </div>
         <div class="quote-section">
@@ -165,7 +176,8 @@
                     srcset="./img/sl8/1x/user-research@1x.jpg"
                     media="(max-width:767px)"
                   />
-                  <img class="responsive-img-user-research"
+                  <img
+                    class="responsive-img-user-research"
                     src="./img/sl8/2x/user-research@2x.jpg"
                     alt="A collage of people"
                   />
@@ -195,7 +207,8 @@
                       srcset="./img/sl8/1x/quantitiveanalysis@1x.png"
                       media="(max-width:767px)"
                     />
-                    <img class="responsive-img-quantitive"
+                    <img
+                      class="responsive-img-quantitive"
                       src="./img/sl8/2x/quantitiveanalysis@2x.png"
                       alt="Quantitive-Analysis"
                     />
@@ -488,7 +501,7 @@
                       their next star.
                     </p>
                   </div>
-                  <div class="column-col col-md-6 col-lg-6">
+                  <div class="column-col">
                     <!-- column -->
                     <picture>
                       <source
@@ -498,6 +511,7 @@
                       <img
                         src="./img/sl8/2x/login@2x.png"
                         alt="SL8 SL8IDesktop_mockups"
+                        class="responsive-mockoup-center"
                       />
                     </picture>
                   </div>
@@ -514,7 +528,7 @@
                     personalize your profile and access powerful shortcuts.
                   </p>
 
-                  <div class="column-col col-md-6 col-lg-6">
+                  <div class="column-col">
                     <!-- column -->
                     <picture>
                       <source
@@ -524,6 +538,7 @@
                       <img
                         src="./img/sl8/2x/Home-settings@2x.png"
                         alt="SL8 SL8IDesktop_mockups"
+                        class="responsive-mockoup-center"
                       />
                     </picture>
                   </div>
@@ -573,6 +588,7 @@
                       <img
                         src="./img/sl8/2x/filter-discover@2x.png"
                         alt="SL8 SL8IDesktop_mockups"
+                        class="responsive-mockoup-right"
                       />
                     </picture>
                   </div>
@@ -614,6 +630,7 @@
                       <img
                         src="./img/sl8/2x/fav-about-message@2x.png"
                         alt="SL8 SL8IDesktop_mockups"
+                        class="responsive-mockoup-center"
                       />
                     </picture>
                   </div>
@@ -688,6 +705,11 @@
         </div>
       </div>
     </footer>
-         <script src="./js/script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4lQnJGfGFf2rQzmvM3T4EcjTDF+N1oRrR+ybw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -18,29 +18,46 @@
     />
 
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <!-- Preload carousel images for instant rendering -->
+    <link rel="preload" as="image" href="./img/img/cat-code.jpg" />
+    <link rel="preload" as="image" href="./img/img/pr.jpg" />
+    <link rel="preload" as="image" href="./img/img/code.jpg" />
+    <link rel="preload" as="image" href="./img/img/slate.jpg" />
+    <link rel="preload" as="image" href="./img/img/sketches-wire.jpg" />
+    <link rel="preload" as="image" href="./img/img/fun.jpg" />
     <link
       rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body id="about-page" class="portfolio">
-    <header id="header">
+    <header>
       <div class="container">
-        <img
-          class="logo"
-          src="./img/logo/SVG/mind.svg"
-          style="width: 100px; height: 100px"
-          alt="Logo"
-        />
-        <nav class="navigation">
-          <ul>
-            <li>
-              <a href="index.html">Work</a>
-            </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="navtoggle" id="myNavtoggle">
+          <img class="logo" src="./img/logo/SVG/mind.svg" alt="Logo" />
+          <nav class="navigation">
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon"
+                  onclick="menuToggle()"
+                  ><i class="fas fa-bars"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -116,22 +133,58 @@
               <div class="snap-carousel">
                 <div class="snap-track">
                   <div class="snap-slide">
-                    <img src="./img/img/cat-code.jpg" alt="Slide 5" />
+                    <img
+                      src="./img/img/cat-code.jpg"
+                      alt="Slide 1"
+                      width="220"
+                      height="280"
+                      loading="eager"
+                    />
                   </div>
                   <div class="snap-slide">
-                    <img src="./img/img/pr.jpg" alt="Slide 2" />
+                    <img
+                      src="./img/img/pr.jpg"
+                      alt="Slide 2"
+                      width="220"
+                      height="280"
+                      loading="eager"
+                    />
                   </div>
                   <div class="snap-slide">
-                    <img src="./img/img/code.jpg" alt="Slide 3" />
+                    <img
+                      src="./img/img/code.jpg"
+                      alt="Slide 3"
+                      width="220"
+                      height="280"
+                      loading="eager"
+                    />
                   </div>
                   <div class="snap-slide">
-                    <img src="./img/img/slate.JPG" alt="Slide 4" />
+                    <img
+                      src="./img/img/slate.jpg"
+                      alt="Slide 4"
+                      width="220"
+                      height="280"
+                      loading="eager"
+                    />
                   </div>
                   <div class="snap-slide">
-                    <img src="./img/img/sketches-wire.jpg" alt="Slide 1" />
+                    <img
+                      src="./img/img/sketches-wire.jpg"
+                      alt="Slide 5"
+                      width="220"
+                      height="280"
+                      loading="eager"
+                    />
                   </div>
                   <div class="snap-slide">
-                    <img src="./img/img/fun.JPG" alt="Slide 6" />
+                    <img
+                      src="./img/img/fun.jpg"
+                      alt="Slide 6"
+                      width="220"
+                      height="280"
+                      loading="eager"
+                    />
                   </div>
                 </div>
               </div>
@@ -266,6 +319,11 @@
         </div>
       </footer>
     </main>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-3gJwYp4lQnJGfGFf2rQzmvM3T4EcjTDF+N1oRrR+ybw="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
