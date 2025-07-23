@@ -531,7 +531,7 @@ margin: 20px 0;
 } */
 
 
-/* Align button to the bottom of the .snap-slide image */
+/* Align button to the bottom of the .ƒ-slide image */
 .snap-slide .button {
   display: block;
   margin: 0 auto;
@@ -842,11 +842,11 @@ footer {
   }
 }
 
- #about-page #hero .col-md-6 {
+ /* #about-page #hero .col-md-6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 #about-page #hero h1.font-heading {
   max-width: 600px;
@@ -965,11 +965,10 @@ footer {
 
 
   /* About page layout for tablets and up */
-  #about-page #hero .row {
+  /* #about-page #hero .row {
     display: flex;
     align-items: center;
-    /* gap: 2rem; */
-  }
+  } */
 
   #about-page #hero .col-md-6:first-child {
     text-align: left;
@@ -1022,12 +1021,12 @@ footer {
     padding-bottom: 20px;
   }
 
-} 
-  .skills-section .col-md-6 {
+
+  /* .skills-section .col-md-6 {
     width: 100%;
     display: block;
     float: none;
-  }
+  } */
   /* Enable floating for larger screens */
  [class*="col-"] {
     float: left;
@@ -1053,7 +1052,7 @@ footer {
   .col-md-11 { width: 91.666667%; }
   .col-md-12 { width: 100.000000%; }
 
- 
+} 
 
 /* position the text side-by size */
 
