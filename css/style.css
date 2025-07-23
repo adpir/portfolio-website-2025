@@ -285,8 +285,7 @@ nav > ul > li > a:hover {
   position: relative;
 } */
 #hero-section {
-   background-color: #f1eef1;
-}
+  background-color: var(--magnolia);}
 
 
 h1.font-heading {
@@ -554,11 +553,11 @@ margin: 20px 0;
  } */
  
 
-.skills-list, .tools-list {
+/* .skills-list, .tools-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
+} */
 
 /* About Me */
 .about-section {
@@ -628,7 +627,9 @@ li
   gap: 2rem;
   align-items: stretch;
 }
-
+.skills-section {
+  margin-top: -6rem;
+}
 .skills-section .col-md-6 {
   float: none !important;
   width: auto !important;
