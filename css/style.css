@@ -323,26 +323,32 @@ font-style: italic;
   -webkit-text-fill-color: transparent;
 }
 
-.marquee-container {
-  padding:5px;
-  background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); /* Example gradient */
+/* .marquee-container {
+  padding:4px;
+  background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); 
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
   position: relative;
-/* margin-top: 0.1rem; */
-/* overflow: hidden; */
+} */
+.marquee-container {
+    padding: 0 4px;  /* only left/right padding */
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue));
+  height: 1.7rem;       /* ← controls ribbon thickness */
+  line-height: 1.5rem;  /* ← vertically centers your text */
+  width: 100%;
+  position: relative;
 }
-
 .marquee {
  display: inline-block;
  min-width: 200%;
 white-space: nowrap;
-font-size: 1.5rem; /* Smaller for mobile */
- font-weight: bold;
- animation: marquee 15s linear infinite;
-            
-          }
+font-size: 1rem; /* Smaller for mobile */
+ /* font-weight: bold; */
+ animation: marquee 20s linear infinite;
+
+}
 .text-h1{
   color: var(--electric-violet);
   font-weight: 700; /* Makes the text bold */
@@ -373,14 +379,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 600;
 }
 
 img {
 width: 100%;
   /* height: auto; */
-  border-radius: 10px; /* Rounded corners for images */
+  border-radius: 20px; /* Rounded corners for images */
 }
 
 .p-description {
@@ -389,7 +395,7 @@ margin: 18px 0;
 
 .chip  {
   display: inline-block;
-  margin: 0 20px 20px 0;
+  margin: 0 10px 10px 0;
    /* Increased bottom margin for more space below chips */
   text-align: center;
   text-transform: capitalize;
@@ -461,13 +467,13 @@ margin: 18px 0;
   color: var(--rich-black);
 }
 
- .user-personas-image img{
+ .user-personas-image {
     max-width: 100%;
     width: 700px;
     display: block;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin:auto;
+    margin: 0 auto;
   }
 
 .user-flow-image {
@@ -479,14 +485,50 @@ margin: 18px 0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.responsive-img  {
+.hero-image  {
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
   height: auto;
   display: block;
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.lo-fidelity-wireframe-image,
+.final-iteration-image,
+.prior-prototype-image,
+.mid-fidelity-wireframe-image,
+.desktop-mockup-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+.overview-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.branding-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px; /* Rounded corners for images */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+
 }
 .create-text{
   background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); /* Example gradient */
@@ -695,7 +737,7 @@ li
 }
 
 /* 2) Style the quote‐section background + spacing */
-.quote-section {
+.quote-section  {
   background-color: var(--thistle);   /* Thistle */
   padding: 2rem 1rem;          /* 32px top/bottom, 16px left/right */
   border-radius: 8px;
@@ -720,35 +762,37 @@ li
   padding-left: 0.75rem;
 }
 
-h3.sub-title {
-position: relative;
-display: inline-block;
-font-size: 1em;
-line-height: 1.6;
-color: var(--rich-black); /* Rich Black */
-margin: 20px 0;
- padding-left: 19px;
+ h3.sub-title {
+  position: relative;
+  display: inline-block;      /* so padding & pseudo-element work on the same line */
+  font-size: 1.5rem;          /* bump this up to whatever headline size you need */
+  line-height: 1;             /* makes vertical centering easier */
+  color: var(--rich-black);
+  margin: 20px 0;
+  padding-left: 1.5em;        /* leave room for the circle + a gap */
 }
 
-h3.sub-title:before{
-  background: var(--electric-violet);
-  position: absolute;
+h3.sub-title::before {
   content: '';
-  width: 10px;
-  height: 10px;
-  left: 0px;
-  top: 7px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.5em;               /* small circle, but scales with your font-size */
+  height: 0.5em;
+  background: var(--electric-violet);
   border-radius: 50%;
+  transform: translateY(-50%);/* vertically center the dot */
 }
-.responsive-img-user-research {
+
+ .responsive-img-user-research  {
   width: 100%;
-  max-width: 700px;
+   max-width: 700px;
   height: auto;
-  display: flex;
+  display: block;
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
-}
+} 
 .responsive-img-quantitive {
   width: 100%;
   max-width: 500px;
@@ -997,7 +1041,7 @@ footer {
   }
   
   .marquee {
-    font-size: 1.75rem;  /* Reduced from 2rem */
+    font-size: 1rem;  /* Reduced from 2rem */
   }
 .skills-section .row {
     grid-template-columns: repeat(2, 1fr);
@@ -1064,20 +1108,22 @@ Large devices (1024px or larger)
   h1.font-heading {
     font-size: 4em;
   }
-  .responsive-mockoup-center img{
+  .responsive-mockoup-center {
     width: 100%;
-    max-width: 700px;
+    max-width: 500px;
     height: auto;
     display: block;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
-  .responsive-mockoup-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%; /* Set a height if you want vertical centering */
+  .lo-fidelity-wireframe-image,
+  .final-iteration-image,
+  .prior-prototype-image,
+  .mid-fidelity-wireframe-image,
+  .desktop-mockup-image,
+  .user-personas-image {
+    max-width: 800px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   
   /* Ensure hamburger is hidden and navigation is visible on large screens */
@@ -1109,7 +1155,7 @@ Large devices (1024px or larger)
 }
 
   .marquee {
-    font-size: 2.5rem;
+    font-size: 1.40rem;
   }
 /* Desktop and up: more space */
 

@@ -20,3 +20,5 @@ function mobileMenuToggle() {
     x.className = 'navtoggle';
   }
 }
+  const m = document.querySelector('.marquee');
+  m.innerHTML = m.innerHTML.trim() + m.innerHTML;
