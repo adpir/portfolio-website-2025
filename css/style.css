@@ -318,8 +318,9 @@ h3 {
 }
 
 img {
-width: 100%;
-  /* height: auto; */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 20px; /* Rounded corners for images */
 }
 
