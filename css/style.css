@@ -121,14 +121,11 @@ body {
   text-align: center; /* Centers text for every section that has it*/
 }
 
-
-
 header{
    background: var(--dark-header);
   position: relative;
   padding: 0;
 }
-
 
 .logo {
   max-width:90px;
@@ -229,16 +226,9 @@ nav > ul > li > a:hover {
   /* margin-bottom: 50px; */
 }
 
-/* #hero {
-  background-color: var(--thistle);
-  padding-top: 20px;
-  padding-bottom: 2.5rem;
-  width: 100%;
-  position: relative;
-} */
 #hero-section {
-  background-color: var(--magnolia);}
-
+  background-color: var(--magnolia);
+}
 
 h1.font-heading {
   font-family: 'Lora', serif;
@@ -344,7 +334,7 @@ margin: 18px 0;
   text-align: center;
   text-transform: capitalize;
   border-radius: 20px;
-  border: 1px solid #c5c2cc;
+  border: 1px solid var(--thistle);
   padding: .1em .6em; /* Added vertical and horizontal padding for taller chips */
   font-size: 0.9rem;
   background-color: transparent;
@@ -372,8 +362,6 @@ margin: 18px 0;
  color: var(--rich-black);
 }
 
-
-
 .resume-button:hover,
 .project-button:hover {
   opacity: 0.8;
@@ -395,7 +383,7 @@ margin: 18px 0;
   opacity: 0.8;
   color: var(--rich-black);
 }
-
+/* Project Section */
  
 .hero-image  {
   width: 100%;
@@ -415,6 +403,67 @@ margin: 18px 0;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+.user-personas-image {
+    max-width: 100%;
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+.responsive-img-userflow {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+ .responsive-img-user-research  {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} 
+.responsive-img-quantitive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.competitive-images-horizontal {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  max-width: 100%;
+  padding: 20px;
+}
+
+/* Ensure images are vertically centered with the list text */
+.competitive-images-horizontal picture {
+  flex: 0 1 220px;
+  max-width: 220px;
+  height: auto;
+transition: transform 0.3s ease;
+}
+
+.competitive-images-horizontal img:hover {
+  transform: scale(1.05);
+}
+.competitive-images-horizontal img:active {
+  transform: scale(0.95);
+}
+
+/* Center the middle image a bit more visually */
+.competitive-images-horizontal picture:nth-child(2) {
+  margin-left: 32px;
+  margin-right: 32px;
+  align-self: center;
 }
 
 
@@ -441,7 +490,6 @@ margin: 18px 0;
  font-style: italic;
 }
 
-
 .quote{
   position: relative;
 display: inline-block;
@@ -461,19 +509,32 @@ margin: 20px 0;
   top: 7px;
   border-radius: 50%;
 } 
-/* .resume-button {
-  display: block;            
-  margin: 0 auto;           
-  padding: 0.5em 1em;
-  font-size: 1rem;
-  background-color: var(--electric-violet);
-  border: none;
-  border-radius: 20px;
-  color: var(--magnolia);
-  transition: background 0.2s ease, color 0.2s ease; 
-  cursor: pointer;
-  text-align: center;          
-} */
+
+/*Style the quote‐section background + spacing */
+.quote-section  {
+  background-color: var(--thistle);   /* Thistle */
+  padding: 2rem 1rem;          /* 32px top/bottom, 16px left/right */
+  border-radius: 8px;
+  margin: 2rem 0;              /* 32px vertical spacing */
+}
+
+/* 3) Style the blockquote inside it */
+.quote-section blockquote {
+  padding-left: 1rem;          /* Indent the text from the left */
+  font-style: italic;          /* Italicize the quote text */
+  color:var(--rich-black); /* Rich Black */             /* Dark‐gray text (Licorice) for contrast */
+  border-left: 4px solid var(--electric-violet); /* Electric Violet vertical bar */
+  line-height: 1.5;            /* Comfortable line spacing */
+}
+
+/* 4) If you want the paragraph itself to have slightly larger text */
+.quote-section blockquote p {
+  font-size: 1.125rem;
+}
+
+.quote-section blockquote {
+  padding-left: 0.75rem;
+}
 
 
 /* Align button to the bottom of the .ƒ-slide image */
@@ -496,8 +557,7 @@ margin: 20px 0;
   font-size: 1.5rem;
 
  } */
- 
-
+/* Typewriter effect */
 /* .skills-list, .tools-list {
   list-style-type: none;
   padding: 0;
@@ -512,14 +572,6 @@ margin: 20px 0;
   margin-bottom: 1.5rem;
   align-items: flex-start;
 }
-/* .content-row {
-  margin-bottom: 1.5rem;
-  width: 100%;
-  height: auto;
-  display: block;
-} */
-
-/* 2a) Photo column */
 
 /* about page */
 p,
@@ -638,31 +690,6 @@ li
   border-radius: 16px;
 }
 
-/* 2) Style the quote‐section background + spacing */
-.quote-section  {
-  background-color: var(--thistle);   /* Thistle */
-  padding: 2rem 1rem;          /* 32px top/bottom, 16px left/right */
-  border-radius: 8px;
-  margin: 2rem 0;              /* 32px vertical spacing */
-}
-
-/* 3) Style the blockquote inside it */
-.quote-section blockquote {
-  padding-left: 1rem;          /* Indent the text from the left */
-  font-style: italic;          /* Italicize the quote text */
-  color:var(--rich-black); /* Rich Black */             /* Dark‐gray text (Licorice) for contrast */
-  border-left: 4px solid var(--electric-violet); /* Electric Violet vertical bar */
-  line-height: 1.5;            /* Comfortable line spacing */
-}
-
-/* 4) If you want the paragraph itself to have slightly larger text */
-.quote-section blockquote p {
-  font-size: 1.125rem;
-}
-
-.quote-section blockquote {
-  padding-left: 0.75rem;
-}
 
  h3.sub-title {
   position: relative;
@@ -684,68 +711,6 @@ h3.sub-title::before {
   background: var(--electric-violet);
   border-radius: 50%;
   transform: translateY(-50%);/* vertically center the dot */
-}
-.user-personas-image {
-    max-width: 100%;
-    width: 600px;
-    display: block;
-    margin: 0 auto;
-  }
-
-
-.responsive-img-userflow {
-  width: 100%;
-  max-width: 300px;
-  display: block;
-  margin: 0 auto;
-}
-
- .responsive-img-user-research  {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-} 
-.responsive-img-quantitive {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-.competitive-images-horizontal {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-  max-width: 100%;
-  padding: 20px;
-}
-
-/* Ensure images are vertically centered with the list text */
-.competitive-images-horizontal picture {
-  flex: 0 1 220px;
-  max-width: 220px;
-  height: auto;
-transition: transform 0.3s ease;
-}
-
-
-.competitive-images-horizontal img:hover {
-  transform: scale(1.05);
-}
-.competitive-images-horizontal img:active {
-  transform: scale(0.95);
-}
-
-/* Center the middle image a bit more visually */
-.competitive-images-horizontal picture:nth-child(2) {
-  margin-left: 32px;
-  margin-right: 32px;
-  align-self: center;
 }
 
 footer#contact h2 { margin-bottom: 1rem; }
