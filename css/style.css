@@ -14,11 +14,8 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+/* Main Page  */
 
-/* html {
-  overflow-x: hidden;
-  height: 100%;
-} */
 html, body {
   height: 100%;
   margin: 0;
@@ -46,17 +43,7 @@ background: var(--thistle);
 .row {
   margin: 25px 0;
 }
-/* .row::after {
-  content: "";
-  clear: both;
-  display: table;
-} */
 
-
-
- /* main.container.about-content{
-  margin: 0;
-} */
 .animation-image {
   width: 100%;
 max-width: 100%;
