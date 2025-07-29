@@ -32,6 +32,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- 1. Preload the SL8 project image for mobile -->
+    <link
+      rel="preload"
+      as="image"
+      href="./img/sl8/2x/SL8@2x.jpg"
+      fetchpriority="high"
+    />
   </head>
   <body id="home-page" class="portfolio">
     <header>
@@ -54,9 +61,10 @@
                 <a
                   href="javascript:void(0);"
                   class="icon"
-                  onclick="menuToggle()">
+                  onclick="menuToggle()"
+                >
                   <i class="fa-solid fa-bars"></i>
-              </a>
+                </a>
               </li>
             </ul>
           </nav>
@@ -95,7 +103,9 @@
                   class="project-image"
                   src="./img/sl8/2x/SL8@2x.jpg"
                   alt="A mockup project for SL8"
-                  loading="lazy"
+                  width="600"
+                  height="400"
+                  fetchpriority="high"
                 />
               </picture>
             </div>
@@ -135,6 +145,8 @@
                   class="project-image"
                   src="./img/pixyfund/2x/Pixyfund@2x.jpg"
                   alt="A mockup project for Pixy Fund"
+                  width="600"
+                  height="400"
                   loading="lazy"
                 />
               </picture>
@@ -2557,7 +2569,7 @@
         </div>
       </div>
     </footer>
-   <script
+    <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
