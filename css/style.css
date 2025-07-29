@@ -242,12 +242,12 @@ h1.font-heading {
   margin-top: 0;
   margin-bottom: 2rem;
 }
-.font-thintext {
+.font-thin-text {
   font-weight: 300; /* Lighter weight for the thin text */
   font-size: 1.2em; /* Slightly smaller than the main heading */
   color: var(--electric-violet);
 }
-.font-bodytext {
+.font-body-text {
   font-style: italic; /* Italic style for the text */
   font-size: 1.2em; /* Slightly smaller than the main heading */
   background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); /* Example gradient */
@@ -334,16 +334,19 @@ margin: 18px 0;
   text-align: center;
   text-transform: capitalize;
   border-radius: 20px;
-  border: 1px solid var(--thistle);
   padding: .1em .6em; /* Added vertical and horizontal padding for taller chips */
   font-size: 0.9rem;
-  background-color: transparent;
   max-width: 100%; /* Prevent overflow, fit within column */
   box-sizing: border-box;
   white-space: nowrap; /* Prevent chips from breaking into multiple lines */
 }
 
-
+.skills-chips .chip {
+  background-color: #feeefff9; /* var(--magnolia) at 90% opacity */
+  color:       var(--rich-black);          /* #05011f */
+  border:          1px solid var(--thistle);
+  z-index:         1;                          /* above any underlying image */
+}
 .project-button,
 .resume-button {
   background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); /*  gradient */
