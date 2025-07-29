@@ -1,21 +1,21 @@
 
-    :root {
+   :root {
   --rich-black: #05011f;
   --dark-purple: #150122;
-  --electric-violet: #9400FF;
+  --electric-violet: #ba42fd;
   --violet: #8c00ff;
   --thistle: #ECD1FF;
+  --light-purple: #f5e0f7;
   --magnolia: #FBF5FF;
-  --accent-blue: #40D3ED;
-  --accent-pink: #FF66C4;
-  --dark-header: #100824;
+  --accent-blue: #14aefc;
+  --accent-pink: #e81cff;
+  --dark-header: #01011f;
   --text-dark: #0d0116;
-}
+} 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 /* Main Page  */
-
 html, body {
   height: 100%;
   margin: 0;
@@ -25,12 +25,12 @@ html, body {
   color: var(--rich-black);
 }
 ::-moz-selection { /* Code for Firefox */
-color:var(--electric-violet);
+color:var(--accent-pink);
 background: var(--thistle);
 }
 
 ::selection {
-color: var(--electric-violet);
+color:var(--accent-pink);
 background: var(--thistle);
 }
 .container {
@@ -217,8 +217,7 @@ nav > ul > li > a:hover {
 }
 
 #hero {
-  background-color: var(--thistle);
-  /* padding: 1em 0; */
+  background-color: var(--light-purple);  /* padding: 1em 0; */
   width: 100%;
   text-align: center; /*center text in the hero section*/
   position: relative;
@@ -266,7 +265,7 @@ font-style: italic;
 }
 
 .marquee-container {
-    padding: 0 4px;  /* only left/right padding */
+  padding: 0 4px;  /* only left/right padding */
   overflow: hidden;
   background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue));
   height: 1.7rem;       /* ← controls ribbon thickness */
@@ -322,10 +321,6 @@ width: 100%;
   /* height: auto; */
   border-radius: 20px; /* Rounded corners for images */
 }
-
-/* .p-description {
-margin: 18px 0;
-} */
 
 .chip  {
   display: inline-block;

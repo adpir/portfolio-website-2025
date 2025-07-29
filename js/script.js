@@ -8,14 +8,5 @@ function menuToggle() {
   }
 }
 
-// Function to toggle the visibility of the mobile navigation menu
-function mobileMenuToggle() {
-  let x = document.getElementById('mobileNavtoggle');
-  if (x.className === 'navtoggle') {
-    x.className += ' responsive';
-  } else {
-    x.className = 'navtoggle';
-  }
-}
   const m = document.querySelector('.marquee');
   m.innerHTML = m.innerHTML.trim() + m.innerHTML;
