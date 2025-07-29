@@ -7,11 +7,12 @@
   --thistle: #ECD1FF;
   --light-purple: #f5e0f7;
   --magnolia: #FBF5FF;
-  --accent-blue: #14aefc;
+  --accent-blue: #0397E2;
   --accent-pink: #e81cff;
   --dark-header: #01011f;
   --text-dark: #0d0116;
 } 
+/* Reset some default styles */ 
 *, *::before, *::after {
   box-sizing: border-box;
 }
