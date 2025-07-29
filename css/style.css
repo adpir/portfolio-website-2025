@@ -94,19 +94,6 @@ height: auto;
     animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-
-.responsive-img-userflow {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 30px;
-  box-shadow: 0 6px 40px rgba(255, 255, 255, 0.15);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem; /* Add vertical spacing between stacked images */
-}
-
 h2.work-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -151,37 +138,14 @@ body {
 
 header{
    background: var(--dark-header);
-  padding: 15px 0;
   position: relative;
   padding: 0;
 }
 
-/* header .container {
-  position: relative;
-  height: auto; 
-  display: flex;
-  align-items: center;
-} */
-/* .logo {
-  max-width: 80px;
-  margin: 0;
-} */
-
-/* Logo styling for mobile */
-/* .logo {
-  max-width: 80px; 
-  float: left;
-  margin-top: 0.5rem;
-} */
 
 .logo {
   max-width:90px;
 }
-/* Navigation styling for mobile */
-/* nav {
-  width: auto;
-} */
-
 nav > ul  {
   list-style-type: none;
   padding: 0;
@@ -270,12 +234,12 @@ nav > ul > li > a:hover {
 
 #hero {
   background-color: var(--thistle);
-  padding: 20px 0;
+  /* padding: 1em 0; */
   width: 100%;
   text-align: center; /*center text in the hero section*/
   position: relative;
   display: inline-block;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 /* #hero {
@@ -293,7 +257,7 @@ h1.font-heading {
   font-family: 'Lora', serif;
   font-weight: 500;
   font-size: 1.5em;
-  line-height: 1.2;
+   line-height: 1.2; 
  color:var(--rich-black); /* Rich Black */
   display: block;
   text-align: start;
@@ -382,9 +346,9 @@ width: 100%;
   border-radius: 20px; /* Rounded corners for images */
 }
 
-.p-description {
+/* .p-description {
 margin: 18px 0;
-}
+} */
 
 .chip  {
   display: inline-block;
@@ -394,7 +358,7 @@ margin: 18px 0;
   text-transform: capitalize;
   border-radius: 20px;
   border: 1px solid #c5c2cc;
-  padding: 5px 20px; /* Added vertical padding for taller chips */
+  padding: .1em .6em; /* Added vertical and horizontal padding for taller chips */
   font-size: 0.9rem;
   background-color: transparent;
   max-width: 100%; /* Prevent overflow, fit within column */
@@ -409,8 +373,8 @@ margin: 18px 0;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
-  padding: 0.6em 2em;
-  margin: 3rem auto;
+  padding: 0.5em 1em;
+  /* margin: 3rem auto;  */
   border-radius: 24px;
   transition: background 0.2s ease, color 0.2s ease;
   display: block;
@@ -430,21 +394,6 @@ margin: 18px 0;
     text-decoration: none; 
 }
 
-
-/* PJ Button  */
-
-  /* display: inline-block;
-  padding: 6px 10px;
-  font-size: 1rem;
-  background: none;
-  border: 2px solid var(--electric-violet);
-  border-radius: 20px;
-  color: var(--magnolia);
-   transition: background 0.2s ease, color 0.2s ease;
-  cursor: pointer;
-}
-  */
-
 .button{
   display: inline-block;
   padding: 6px 18px;
@@ -460,32 +409,13 @@ margin: 18px 0;
   color: var(--rich-black);
 }
 
- .user-personas-image {
-    max-width: 100%;
-    width: 700px;
-    display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: 0 auto;
-  }
-
-.user-flow-image {
+ 
+.hero-image  {
   width: 100%;
   max-width: 700px;
   height: auto;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.hero-image  {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .lo-fidelity-wireframe-image,
@@ -494,34 +424,27 @@ margin: 18px 0;
 .mid-fidelity-wireframe-image,
 .desktop-mockup-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   height: auto;
   display: block;
   margin: 0 auto;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 
 .overview-image {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   height: auto;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
 }
 .branding-image {
   width: 100%;
-  max-width: 500px;
-  border-radius: 20px; /* Rounded corners for images */
+  max-width: 400px;
   height: auto;
   display: block;
   margin: 0 auto;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
-
 }
 .create-text{
   background: linear-gradient(90deg, var(--electric-violet), var(--accent-blue)); /* Example gradient */
@@ -621,11 +544,10 @@ li
   line-height: 1.6;       /* ~26px */
  color:var(--rich-black); /* Rich Black */        /* Licorice or your chosen dark text color */
 }
-.about-img  {
+/* .about-img  {
   width: 100%;
   max-width: 300px;
-
-}
+} */
 
 .card {
   background-color: var(--thistle);
@@ -776,24 +698,34 @@ h3.sub-title::before {
   border-radius: 50%;
   transform: translateY(-50%);/* vertically center the dot */
 }
+.user-personas-image {
+    max-width: 100%;
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+.responsive-img-userflow {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
 
  .responsive-img-user-research  {
   width: 100%;
-   max-width: 700px;
+  max-width: 600px;
   height: auto;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
 } 
 .responsive-img-quantitive {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 .competitive-images-horizontal {
   display: flex;
@@ -887,14 +819,14 @@ footer {
 
 #about-page #hero h1.font-heading {
   max-width: 600px;
-  margin-bottom: 1.5rem;
+margin-bottom: 1.5rem; 
   text-align: left;
   width: 100%;
 }
 
-#about-page #hero h1.font-heading .text-h1 {
+ /* #about-page #hero h1.font-heading .text-h1 {
   white-space: nowrap;
-}
+}  */
 
 #about-page #hero h2.font-body {
   max-width: 600px;
@@ -910,39 +842,39 @@ footer {
   width: 100%;
 }
 
-#about-page .about-image {
+/* #about-page .about-image {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
-} 
+}  
 
 /* hide .about-image on screens smaller than 768px */
 
 @media only screen and (min-width: 641px) {
   header {
      text-align: unset;
-    padding: 20px 0;
+    /* padding: 10px 0; */
   }
   /* Header layout for tablets and up */
-  header .container {
+   header .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0;
     padding: 0 1rem; 
-  }
-.about-image.col-md-6{
+  } 
+/* .about-image.col-md-6{
     width: 50%;
-  }
+  } */
   /* Reset float positioning for larger screens */
-  .logo {
+   .logo {
     float: none;
     margin-top: 0;
     width: 100px;
     height: 100px;
-    margin-bottom: 0; /* Remove bottom margin on larger screens */
-  }
+    margin-bottom: 0; 
+  } 
 
   nav {
     float: none;
@@ -1001,15 +933,13 @@ footer {
   padding: 0;
 }
 
-
-
   /* About page layout for tablets and up */
-  /* #about-page #hero .row {
+   #about-page #hero .row {
     display: flex;
     align-items: center;
-  } */
+  } 
 
-   /* #about-page #hero .col-md-6:first-child {
+   #about-page #hero .col-md-6:first-child {
     text-align: left;
   } 
 
@@ -1026,7 +956,7 @@ footer {
     max-width: none;
     margin: 0 0 1.5rem 0;
   }
-   */
+   
   h1.font-heading {
     font-size: 2.5rem;
   }
@@ -1052,12 +982,10 @@ footer {
 
   .column-col  {
     width: 100%;
-    max-width: 700px;
+    max-width: 450px;
     height: auto;
     display: block;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 
 
@@ -1078,7 +1006,7 @@ footer {
 }
 
   /* Grid columns for medium screens */
-  .col-md-1 { width: 8.333333%; }
+   .col-md-1 { width: 8.333333%; }
   .col-md-2 { width: 16.666667%; }
   .col-md-3 { width: 25.000000%; }
   .col-md-4 { width: 33.333333%; }
@@ -1089,11 +1017,10 @@ footer {
   .col-md-9 { width: 75.000000%; }
   .col-md-10 { width: 83.333333%; }
   .col-md-11 { width: 91.666667%; }
-  .col-md-12 { width: 100.000000%; }
+  .col-md-12 { width: 100.000000%; } 
 
 } 
 
-/* position the text side-by size */
 
 /* ==============================
 Large devices (1024px or larger)
@@ -1101,8 +1028,13 @@ Large devices (1024px or larger)
 @media only screen and (min-width: 1024px) {
   /* Larger typography for desktop */
   h1.font-heading {
-    font-size: 4em;
+    font-size: 3em;
   }
+/*  */
+
+  /* .about-image.col-md-6{
+    width: 50%;
+  } */
   .responsive-mockoup-center {
     width: 100%;
     max-width: 500px;
@@ -1117,10 +1049,11 @@ Large devices (1024px or larger)
   .desktop-mockup-image,
   .user-personas-image {
     max-width: 800px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
   }
-  
+ 
   /* Ensure hamburger is hidden and navigation is visible on large screens */
   .navtoggle li .icon {
     display: none !important;
@@ -1154,10 +1087,6 @@ Large devices (1024px or larger)
   }
 /* Desktop and up: more space */
 
-  /* .skills-section .row {
-    gap: 3rem;
-  } */
-
  .skills-section .row {
     grid-template-columns: 1fr 1fr; /* Desktop: two columns side by side */
   }
@@ -1175,8 +1104,8 @@ Large devices (1024px or larger)
   .col-lg-11 { width: 91.666667%; }
   .col-lg-12 { width: 100.000000%; }
 
-  .project-button {
-    /* margin-top: 0.7rem;  */
+ .project-button {
+    margin-top: 5em;
     align-self: flex-start;
 }
 
@@ -1186,21 +1115,37 @@ X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
 
-
+/* .work-section .col-md-6 .col-lg-5 .skills-chips .project-button{
+padding-left: 1em;
+} */
 /* About Page Specific Styles */
-
-.resume-button {
-  display: block;
-  margin-left: 0 !important; /* Force left alignment */
-  margin-right: auto !important;
-  /* padding: 0.4em 0.8em;  */
-  /* Reduced padding for less space */
-  padding: 0.9em 9em;
-  border: none;
-  border-radius: 20px;
-  color: var(--rich-black);
-  transition: 0.2s opacity;
-  cursor: pointer;
-  text-align: center; /* Align text inside button to the left */
+ .project-button {
+    margin-top: 5em;
+    align-self: flex-start;
 }
+#about-page #hero h1.font-heading {
+  max-width: 600px;
+line-height: 1.6;
+  text-align: left;
+  width: 100%;
+}
+
+ #about-page #hero h1.font-heading .text-h1 {
+  white-space: nowrap;
+}  
+
+#about-page #hero h2.font-body {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+#about-page #hero p.font-body {
+  max-width: 600px;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  width: 100%;
+}
+
 }
